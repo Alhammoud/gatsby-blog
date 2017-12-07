@@ -3,46 +3,39 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
+
 ReactGA.initialize('UA-42211308-2')
 
 import './index.css'
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
+  <ul className="home-nav">
+    <li key={0}>
+      <Link to="/">Home</Link>
+    </li>
+    <li key={1}>
+      <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
+        LinkedIn
+      </a>
+    </li>
+    <li key={2}>
+      <a target="_blank" href="https://github.com/rozenmd">
+        GitHub
+      </a>
+    </li>
+  </ul>
 )
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Max Rozen - Software Engineer - Portfolio"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {
+          name: 'description',
+          content: 'Max Rozen - Software Engineer - Blog',
+        },
+        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' },
       ]}
     />
     <Header />

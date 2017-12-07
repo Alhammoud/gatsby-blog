@@ -14,15 +14,12 @@ const IndexPage = ({ data }) => {
             </h2>
             <p>{frontmatter.date}</p>
             <p>{frontmatter.excerpt}</p>
-            <ul>
+            <p>
+              Tags:{' '}
               {post.frontmatter.tags.map((tag, i) => {
-                return (
-                  <li key={i}>
-                    <Link to={`/tags/${tag}`}>{tag}</Link>
-                  </li>
-                )
+                return <Link to={`/tags/${tag}`}>#{tag} </Link>
               })}
-            </ul>
+            </p>
           </div>
         )
       })}
