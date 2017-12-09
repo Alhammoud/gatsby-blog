@@ -19,15 +19,20 @@ const Header = () => (
       <ul className="home-nav">
         <li key={0}>
           <Link className="custom-link" to="/">
-            Home
+            HOME
           </Link>
         </li>
         <li key={1}>
+          <Link className="custom-link" to="/about">
+            ABOUT
+          </Link>
+        </li>
+        <li key={2}>
           <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </li>
-        <li key={2}>
+        <li key={3}>
           <a target="_blank" href="https://github.com/rozenmd">
             <FontAwesomeIcon icon={faGithub} />
           </a>

@@ -1,6 +1,6 @@
 ---
 path: "/billdivider"
-date: "2017-07-01T18:52:00.000Z"
+date: "2017-07-03T18:52:00.000Z"
 title: "Billdivider.com"
 tags: ['billdivider']
 excerpt: "Divides your bills!"
