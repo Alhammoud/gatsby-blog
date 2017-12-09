@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Arvo:700|Oxygen:300|Roboto:300,900");
+@import url('https://fonts.googleapis.com/css?family=Arvo:700|Oxygen:300|Roboto:300,900');
 
 .col-centered {
   float: none;
@@ -9,7 +9,7 @@
 .home-title {
   padding: 0px 10px;
   text-align: center;
-  font-family: "Arvo", serif;
+  font-family: 'Arvo', serif;
   font-size: 44px;
   color: black;
   margin-bottom: 25px;
@@ -43,7 +43,7 @@
   /*border: solid 1px blue;*/
   /*margin: 0 auto;*/
   padding: 0px 10px;
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .home-nav li > a.custom-link {
   color: black;
@@ -76,7 +76,7 @@
 .row .about-text > p {
   text-align: center;
   padding: 0px;
-  width: 100%;
+  width: 80%;
   font-size: 22px;
 }
 
@@ -97,7 +97,7 @@
 }
 .about nav.navbar-static-top .site-header {
   text-align: left;
-  font-family: "Arvo", serif;
+  font-family: 'Arvo', serif;
   text-transform: none;
   font-size: 24px;
   cursor: pointer;
@@ -144,7 +144,7 @@ h2.project-title {
   color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: "Roboto", monospace;
+  font-family: 'Roboto', monospace;
   font-weight: 900;
   font-size: 24px;
   padding: 0px 20px;
@@ -159,7 +159,7 @@ h2.project-title {
   border-radius: 3px;
   padding: 5px 9px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 5px;
 }
@@ -188,7 +188,7 @@ h2.project-title {
 
 .custom-post-heading h1,
 h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 900 !important;
   color: black;
   text-align: center;
@@ -222,7 +222,7 @@ h3 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   padding: 0px 30px;
   line-height: 1.5;
@@ -285,7 +285,7 @@ p {
   color: black;
   padding: 12px 12px 20px 12px;
   font-weight: 300;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 
   border: 2px solid black;
@@ -410,7 +410,7 @@ text.calendar-heatmap-legend-text,
 text.day-initial {
   font-size: 12px;
   fill: #aaaaaa;
-  font-family: Helvetica, arial, "Open Sans", sans-serif;
+  font-family: Helvetica, arial, 'Open Sans', sans-serif;
 }
 .day-cell {
   border: 1px solid gray;
@@ -430,7 +430,7 @@ rect.day-cell:hover {
   text-align: center;
 }
 .day-cell-tooltip > span {
-  font-family: Helvetica, arial, "Open Sans", sans-serif;
+  font-family: Helvetica, arial, 'Open Sans', sans-serif;
 }
 .calendar-heatmap {
   box-sizing: initial;
@@ -471,7 +471,7 @@ rect.day-cell:hover {
 .footer-bottom {
   margin-top: 15px;
   text-align: center;
-  font-family: "Arvo", serif;
+  font-family: 'Arvo', serif;
   color: black;
   font-weight: bold;
   font-size: 25px;
