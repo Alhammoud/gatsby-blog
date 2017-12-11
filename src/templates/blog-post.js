@@ -18,7 +18,6 @@ class Template extends React.Component {
       disqusShortname: 'rozenmd',
       disqusUrlPrefix: 'maxrozen.com',
     }
-    console.log(data)
     return (
       <div>
         <Helmet title={`${title} - My Blog`} />
