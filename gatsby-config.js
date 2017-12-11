@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
+    siteUrl: `https://www.maxrozen.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
