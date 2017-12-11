@@ -12,24 +12,12 @@ export default class Disqus extends React.Component {
 
   componentWillMount() {
     const component = this
-    if (typeof DISQUS !== 'undefined') {
-      DISQUS.reset({
-        reload: true,
-        config: function() {
-          this.page.identifier = component.state.identifier
-          this.page.title = component.state.title
-          this.page.url = component.state.url
-          this.page.category_id = component.state.category_id
-          this.callbacks.onNewComment = component.state.onNewComment
-        },
-      })
-    } else {
-      if (typeof document != 'undefined') {
-        const script = document.createElement('script')
-        script.src = `//${component.state.shortname}.disqus.com/embed.js`
-        script.async = true
-        document.body.appendChild(script)
-      }
+
+    if (typeof document != 'undefined') {
+      const script = document.createElement('script')
+      script.src = `//${component.state.shortname}.disqus.com/embed.js`
+      script.async = true
+      document.body.appendChild(script)
     }
   }
 
@@ -43,7 +31,6 @@ export default class Disqus extends React.Component {
       onNewComment,
       ...props
     } = this.props
-    debugger
     return <div id="disqus_thread" {...props} />
   }
 }

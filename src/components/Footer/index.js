@@ -20,7 +20,7 @@ export default () => {
         <div className="footer-bottom">
           <p>
             Written by <strong>Max Rozen</strong> who lives and works in Sydney,
-            building really cool stuff. You should{' '}
+            building cool stuff. You should{' '}
             <a href="https://twitter.com/mxrozen">follow him on Twitter</a>
           </p>
         </div>
