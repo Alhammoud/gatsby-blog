@@ -8,6 +8,8 @@ ReactGA.initialize('UA-42211308-2')
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './clean-blog.css'
 import './custom.css'
+require('prismjs/themes/prism.css')
+
 import fontawesome from '@fortawesome/fontawesome'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faLinkedinIn, faGithub } from '@fortawesome/fontawesome-free-brands'

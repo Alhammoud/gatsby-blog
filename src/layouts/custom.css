@@ -233,15 +233,6 @@ p {
   width: 50vw;
 }
 
-.custom-code {
-  width: 54vw;
-  margin: auto;
-}
-
-.custom-code code {
-  font-size: 16px;
-}
-
 .caption > code {
   font-size: 12px;
 }
