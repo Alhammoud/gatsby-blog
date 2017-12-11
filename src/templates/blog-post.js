@@ -1,12 +1,16 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-
+import Disqus from '../components/Disqus'
 const Template = ({ data, location, pathContext }) => {
   const { markdownRemark: post } = data
   const { frontmatter, html } = post
   const { title, date } = frontmatter
   const { next, prev } = pathContext
+  const config = {
+    disqusShortname: 'rozenmd',
+    disqusUrlPrefix: 'maxrozen.com',
+  }
   return (
     <div>
       <Helmet title={`${title} - My Blog`} />
@@ -15,6 +19,12 @@ const Template = ({ data, location, pathContext }) => {
         <h1>{title}</h1>
         <h3>{date}</h3>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <Disqus
+          shortname={config.disqusShortname}
+          title={title}
+          url={`${config.disqusUrlPrefix}${location.pathname}`}
+        />
+
         <p>
           {prev && (
             <Link to={prev.frontmatter.path}>
