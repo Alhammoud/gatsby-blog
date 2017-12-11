@@ -15,7 +15,7 @@ So here's v3 of my blog, written in Markdown, and served by
 
 My aim is to just post things I find in my day to day which solve problems that
 others may face. For example,
-[this solution](https://github.com/JedWatson/react-select/issues/1679#issuecomment-307016615)
-in the popular Reactjs library
-[react-select](https://github.com/JedWatson/react-select) which I will write
-about in my next post.
+<a href="https://github.com/JedWatson/react-select/issues/1679#issuecomment-307016615" target="_blank">this
+solution</a> in the popular Reactjs library
+<a href="https://github.com/JedWatson/react-select" target="_blank">react-select</a>
+which I will write about in my next post.
