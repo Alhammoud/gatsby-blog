@@ -2,7 +2,7 @@
 path: "/2017-07-02-nghbr"
 date: "2017-07-02T18:52:00.000Z"
 title: "NGHBR"
-tags: ['ngbhr']
+tags: ['ngbhr','side-project']
 excerpt: "A hyperlocal social network for the suburbs"
 ---
 

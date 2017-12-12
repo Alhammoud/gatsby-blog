@@ -2,7 +2,7 @@
 path: "/2017-07-01-can-i-go-outside-yet"
 date: "2017-07-01T18:52:00.000Z"
 title: "Can I Go Outside Yet?"
-tags: ['canigooutsideyet','angular']
+tags: ['canigooutsideyet','angular','side-project']
 excerpt: "A simple way to check if it's worth going outside today"
 ---
 

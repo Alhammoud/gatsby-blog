@@ -2,7 +2,7 @@
 path: "/2017-07-03-billdivider"
 date: "2017-07-03T18:52:00.000Z"
 title: "Billdivider.com"
-tags: ['billdivider']
+tags: ['billdivider','side-project']
 excerpt: "Divides your bills!"
 ---
 

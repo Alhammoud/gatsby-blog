@@ -2,7 +2,7 @@
 path: "/2017-07-10-static-blog"
 date: "2017-12-10T18:52:00.000Z"
 title: "Static Blog Time!"
-tags: ['blog','react']
+tags: ['blog','react','side-project']
 excerpt: "Here's hoping I actually keep writing!"
 ---
 
