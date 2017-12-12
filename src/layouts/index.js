@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import ReactGA from 'react-ga'
 import Footer from '../components/Footer'
-ReactGA.initialize('UA-42211308-2')
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './clean-blog.css'

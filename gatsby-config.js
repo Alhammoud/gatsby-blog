@@ -17,6 +17,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-42211308-2',
+      },
+    },
+    {
       resolve: `gatsby-remark-prismjs`,
       options: {
         // Class prefix for <pre> tags containing syntax highlighting;
