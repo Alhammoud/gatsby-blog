@@ -17,6 +17,39 @@ Before you ask 'Seriously, yet another job board?' - I'll just interject and say
 I did this mostly to gather what I've learned in my new role at Arup in one
 place.
 
+#### Background & Approach:
+
+After running my portfolio website on a classic Linux/nginx server setup for a
+year, I grew tired of having to pay for it ($12 per month for 50ish hits per
+month) - so I was already keen to keep my side-projects as cheap as possible
+
+I gave myself a few constraints to make the project a little more challenging:
+
+* No servers
+* As cheap as possible
+* Must be effortlessly scalable
+
+Essentially it's just a S3-hosted frontend with a DynamoDB-powered backend.
+
+The real challenge came from figuring out the backend. Since I had worked for a
+year with Django and Django REST Framework, it seemed like a natural fit to have
+Django models connected to DynamoDB, and just have JavaScript Fetch calls
+grabbing the data.
+
+The issue with that approach is that Django doesn't natively support DynamoDB,
+and just setting it up MongoDB is a complete pain. So to get DynamoDB working I
+would have to write my own ORM, and I hate Yak-shaving.
+
+Enter [API Star](https://github.com/encode/apistar) - an API Framework designed
+to out-perform Node. It was simple enough to setup the python library PynamoDB
+to interact with DynamoDB, but the performance wasn't the best (Scan operations
+were taking 1 second per record retrieved)
+
+So I decided to take a gamble and re-write the entire backend using Node and
+Graphql. I had worked with a couple of implementations at work already, and knew
+the performance was much better than Flask/Django. Net result: I now have a
+backend in 36 lines of code to accept graphql requests, and handle errors.
+
 #### Tech Stack:
 
 Features:
