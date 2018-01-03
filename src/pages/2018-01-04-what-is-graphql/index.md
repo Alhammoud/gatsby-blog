@@ -2,7 +2,7 @@
 path: "/2018-01-04-what-is-graphql"
 date: "2018-01-04T05:52:00.000Z"
 title: "What is GraphQL?"
-tags: ['GraphQL']
+tags: ['graphql']
 excerpt: "What exactly *is* GraphQL? Using NodeJS and AWS Lambda to illustrate an example"
 ---
 
