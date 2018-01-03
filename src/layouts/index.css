@@ -88,10 +88,18 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
-code,
+pre code {
+  padding: 2px 4px !important;
+  width: 90vw;
+  font-size: 90% !important;
+  color: #c7254e !important;
+  background-color: #f9f2f4 !important;
+  border-radius: 4px !important;
+}
 kbd,
 pre,
 samp {
+  width: 90%;
   font-family: monospace, monospace;
   font-size: 1em;
 }
@@ -590,33 +598,7 @@ th:last-child,
 td:last-child {
   padding-right: 0;
 }
-tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
-    'Liberation Mono', Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
-pre code {
-  background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: ' ';
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: '';
-}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -854,19 +836,6 @@ p {
 }
 .row > p {
   width: 50vw;
-}
-
-.custom-code {
-  width: 54vw;
-  margin: auto;
-}
-
-.custom-code code {
-  font-size: 16px;
-}
-
-.caption > code {
-  font-size: 12px;
 }
 
 .chart-container {

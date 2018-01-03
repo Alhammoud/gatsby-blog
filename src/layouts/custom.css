@@ -559,10 +559,6 @@ rect.day-cell:hover {
   }
 
   .row > p,
-  .custom-code {
-    width: 90vw;
-  }
-
   #leaflet-map {
     height: 90vh;
   }

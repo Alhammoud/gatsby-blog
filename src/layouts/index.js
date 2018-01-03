@@ -51,9 +51,9 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: 'Max Rozen - Software Engineer - Blog',
+          content: 'Max Rozen - Software Engineer - Blog'
         },
-        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' },
+        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' }
       ]}
     />
     <Header />
@@ -62,7 +62,7 @@ const TemplateWrapper = ({ children }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
+        paddingTop: 0
       }}
     >
       {children()}
@@ -73,7 +73,7 @@ const TemplateWrapper = ({ children }) => (
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 }
 
 export default TemplateWrapper
