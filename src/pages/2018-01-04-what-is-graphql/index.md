@@ -148,3 +148,6 @@ In this example, we pull in the bulk of our User fields from the AWS DynamoDB
 docClient.query call. We can then add extra fields like `name` from external
 sources (Postgres or an `upstream_url` in this example). You can even hard code
 values, as in the case of `somethingElse`.
+
+Stay tuned for part two of this article, where I'll show you how to set up your
+own graphql server.
