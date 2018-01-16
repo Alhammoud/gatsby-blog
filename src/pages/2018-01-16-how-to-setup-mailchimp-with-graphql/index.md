@@ -1,6 +1,6 @@
 ---
-path: "/2018-01-04-what-is-graphql"
-date: "2018-01-04T05:52:00.000Z"
+path: "/2018-01-16-what-is-graphql"
+date: "2018-01-16T05:52:00.000Z"
 title: "How to setup MailChimp with GraphQL"
 tags: ['graphql','mailchimp']
 excerpt: "How to add MailChimp to your GraphQL resolver backend - surprisingly easy to do!"
