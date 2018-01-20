@@ -1,26 +1,26 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    siteUrl: `https://www.maxrozen.com`,
+    siteUrl: `https://maxrozen.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: `gatsby-plugin-sitemap`
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src`,
-      },
+        path: `${__dirname}/src`
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-42211308-2',
-      },
+        trackingId: 'UA-42211308-2'
+      }
     },
     {
       resolve: `gatsby-remark-prismjs`,
@@ -32,8 +32,8 @@ module.exports = {
         // you may use this to prevent Prism from re-processing syntax.
         // This is an uncommon use-case though;
         // If you're unsure, it's best to use the default value.
-        classPrefix: 'language-',
-      },
-    },
-  ],
+        classPrefix: 'language-'
+      }
+    }
+  ]
 }
