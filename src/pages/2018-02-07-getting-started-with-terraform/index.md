@@ -16,7 +16,7 @@ confirm before you blow away mission-critical architecture - nifty!)
 
 ### Why do I need it?
 
-Essentially its a form of communication with your other developers, that goes
+Essentially it's a form of communication with your other developers, that goes
 beyond a simple architecture diagram.
 
 Terraform lets you quickly replicate your existing architecture too. Say you're
