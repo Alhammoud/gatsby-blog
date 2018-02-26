@@ -2,7 +2,7 @@
 path: "/2018-02-26-so-i-had-an-idea"
 date: "2018-02-26T05:52:00.000Z"
 title: "So I had an idea..."
-tags: ['serverless','graphql']
+tags: ['startups,'business','hackathon']
 excerpt: "A retrospective on my entrepreneurial endeavours of the past week"
 ---
 
