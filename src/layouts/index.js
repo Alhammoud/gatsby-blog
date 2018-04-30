@@ -10,11 +10,14 @@ import './custom.css'
 require('prismjs/themes/prism.css')
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faGithub } from '@fortawesome/fontawesome-free-brands'
+import {
+  faLinkedinIn,
+  faGithub,
+  faTwitter,
+} from '@fortawesome/fontawesome-free-brands'
 
 const Header = () => (
   <div className="container">
-    <h1 className="home-title">Max Rozen</h1>
     <div>
       <ul className="home-nav">
         <li key={0}>
@@ -23,9 +26,9 @@ const Header = () => (
           </Link>
         </li>
         <li key={1}>
-          <Link className="custom-link" to="/about">
-            ABOUT
-          </Link>
+          <a target="_blank" href="https://www.twitter.com/MxRozen">
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
         </li>
         <li key={2}>
           <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
@@ -39,8 +42,6 @@ const Header = () => (
         </li>
       </ul>
     </div>
-
-    <div className="divider" />
   </div>
 )
 
@@ -51,9 +52,9 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: 'Max Rozen - Software Engineer - Blog'
+          content: 'Max Rozen - Software Engineer - Blog',
         },
-        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' }
+        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' },
       ]}
     />
     <Header />
@@ -62,18 +63,16 @@ const TemplateWrapper = ({ children }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0
+        paddingTop: 0,
       }}
     >
       {children()}
     </div>
-    <div className="divider" />
-    <Footer />
   </div>
 )
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 }
 
 export default TemplateWrapper

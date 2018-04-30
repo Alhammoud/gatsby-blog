@@ -1,5 +1,5 @@
 ---
-path: "/2018-01-16-how-to-setup-mailchimp-with-graphql"
+path: "/2018/01/16/how-to-setup-mailchimp-with-graphql"
 date: "2018-01-16T05:52:00.000Z"
 title: "How to setup MailChimp with GraphQL"
 tags: ['graphql','mailchimp']

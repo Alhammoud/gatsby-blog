@@ -1,5 +1,5 @@
 ---
-path: "/2017-12-20-my-side-project-jobsok-io"
+path: "/2017/12/20/my-side-project-jobsok-io"
 date: "2017-12-20T08:52:00.000Z"
 title: "My Side-project: https://JobsOk.io"
 tags: ['react','graphql','side-project']

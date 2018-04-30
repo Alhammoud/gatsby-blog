@@ -1,5 +1,5 @@
 ---
-path: "/2017-12-11-react-select"
+path: "/2017/12/11/react-select"
 date: "2017-12-11T18:52:00.000Z"
 title: "How to style react-select with styled-components or emotion"
 tags: ['react','react-select','styled-components','emotion']

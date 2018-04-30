@@ -1,5 +1,5 @@
 ---
-path: "/2018-02-13-whats-new-in-es6-javascript"
+path: "/2018/02/13/whats-new-in-es6-javascript"
 date: "2018-02-13T05:52:00.000Z"
 title: "What's new in JavaScript ES6?"
 tags: ['javascript','es6']

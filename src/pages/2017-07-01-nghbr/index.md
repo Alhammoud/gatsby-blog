@@ -1,5 +1,5 @@
 ---
-path: "/2017-07-02-nghbr"
+path: "/2017/07/02/nghbr"
 date: "2017-07-02T18:52:00.000Z"
 title: "NGHBR"
 tags: ['ngbhr','side-project']
