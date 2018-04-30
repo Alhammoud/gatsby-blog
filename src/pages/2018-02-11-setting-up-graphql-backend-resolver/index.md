@@ -1,5 +1,5 @@
 ---
-path: "/2018-02-11-setting-up-graphql-backend-resolver"
+path: "/2018/02/11/setting-up-graphql-backend-resolver"
 date: "2018-02-11T05:52:00.000Z"
 title: "Setting up your own GraphQL Backend Resolvers"
 tags: ['serverless','graphql']

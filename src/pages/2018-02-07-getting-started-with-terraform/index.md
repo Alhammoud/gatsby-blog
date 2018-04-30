@@ -1,5 +1,5 @@
 ---
-path: "/2018-02-07-getting-started-with-terraform"
+path: "/2018/02/07/getting-started-with-terraform"
 date: "2018-02-07T05:52:00.000Z"
 title: "Getting started with Terraform"
 tags: ['serverless','terraform']

@@ -1,5 +1,5 @@
 ---
-path: "/2018-02-26-so-i-had-an-idea"
+path: "/2018/02/26/so-i-had-an-idea"
 date: "2018-02-26T05:52:00.000Z"
 title: "So I had an idea..."
 tags: ['startups','business','hackathon']

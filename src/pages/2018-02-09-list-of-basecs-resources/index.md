@@ -1,5 +1,5 @@
 ---
-path: "/2018-02-09-list-of-basecs-resources"
+path: "/2018/02/09/list-of-basecs-resources"
 date: "2018-02-09T05:52:00.000Z"
 title: "List of BaseCS resources"
 tags: ['computer-science','theory']

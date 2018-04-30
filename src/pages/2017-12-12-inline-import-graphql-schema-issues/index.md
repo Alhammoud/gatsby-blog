@@ -1,5 +1,5 @@
 ---
-path: "/2017-12-12-inline-import-graphql-issues"
+path: "/2017/12/12/inline-import-graphql-issues"
 date: "2017-12-12T18:52:00.000Z"
 title: "How to resolve 'X defined in resolvers, but not in schema' with babel-plugin-inline-import"
 tags: ['react','babel','graphql','inline-import']
