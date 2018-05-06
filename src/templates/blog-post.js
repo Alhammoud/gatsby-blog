@@ -19,38 +19,44 @@ class Template extends React.Component {
       disqusUrlPrefix: 'maxrozen.com',
     }
     return (
-      <div>
-        <Helmet title={`${title} - My Blog`} />
+      <section className="section">
+        <div className="container content">
+          <div className="columns">
+            <div className="column is-9">
+              <Helmet title={`${title} - My Blog`} />
 
-        <div>
-          <h1>{title}</h1>
-          <h3>{date}</h3>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+              <div>
+                <h1>{title}</h1>
+                <h3>{date}</h3>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
 
-          <Disqus
-            shortname={config.disqusShortname}
-            title={title}
-            identifier={location.pathname}
-            url={`${config.disqusUrlPrefix}${location.pathname}`}
-          />
-          <div id="disqus_thread" />
+                <Disqus
+                  shortname={config.disqusShortname}
+                  title={title}
+                  identifier={location.pathname}
+                  url={`${config.disqusUrlPrefix}${location.pathname}`}
+                />
+                <div id="disqus_thread" />
 
-          <p>
-            {prev && (
-              <Link to={prev.frontmatter.path}>
-                Previous: {prev.frontmatter.title}
-              </Link>
-            )}
-          </p>
-          <p>
-            {next && (
-              <Link to={next.frontmatter.path}>
-                Next: {next.frontmatter.title}
-              </Link>
-            )}
-          </p>
+                <p>
+                  {prev && (
+                    <Link to={prev.frontmatter.path}>
+                      Previous: {prev.frontmatter.title}
+                    </Link>
+                  )}
+                </p>
+                <p>
+                  {next && (
+                    <Link to={next.frontmatter.path}>
+                      Next: {next.frontmatter.title}
+                    </Link>
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     )
   }
 }

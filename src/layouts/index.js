@@ -4,43 +4,47 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './clean-blog.css'
-import './custom.css'
-require('prismjs/themes/prism.css')
-
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import {
   faLinkedinIn,
   faGithub,
   faTwitter,
 } from '@fortawesome/fontawesome-free-brands'
+import './all.sass'
 
 const Header = () => (
-  <div className="container">
-    <div>
-      <ul className="home-nav">
-        <li key={0}>
-          <Link className="custom-link" to="/">
-            HOME
-          </Link>
-        </li>
-        <li key={1}>
-          <a target="_blank" href="https://www.twitter.com/MxRozen">
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-        </li>
-        <li key={2}>
-          <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-        </li>
-        <li key={3}>
-          <a target="_blank" href="https://github.com/rozenmd">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </li>
-      </ul>
+  <div className="container" style={{ padding: '15px', color: 'black' }}>
+    <div className="columns is-mobile">
+      <div className="column is-offset-one-quarter is-half">
+        <ul
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+          }}
+        >
+          <li key={0}>
+            <Link style={{ fontSize: '1.5em' }} to="/">
+              HOME
+            </Link>
+          </li>
+          <li key={1}>
+            <a target="_blank" href="https://www.twitter.com/MxRozen">
+              <FontAwesomeIcon size={'2x'} icon={faTwitter} />
+            </a>
+          </li>
+          <li key={2}>
+            <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
+              <FontAwesomeIcon size={'2x'} icon={faLinkedinIn} />
+            </a>
+          </li>
+          <li key={3}>
+            <a target="_blank" href="https://github.com/rozenmd">
+              <FontAwesomeIcon size={'2x'} icon={faGithub} />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 )
@@ -48,7 +52,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Max Rozen - Software Engineer - Portfolio"
+      title="Max Rozen - Software Engineer"
       meta={[
         {
           name: 'description',

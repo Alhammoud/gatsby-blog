@@ -34,37 +34,43 @@ const IndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
   sortByField(posts, true, 'path')
   return (
-    <div>
-      <div>Hey there.</div>
-      <div>
-        I'm{' '}
-        <a target="_blank" href="https://www.twitter.com/mxrozen">
-          Max
-        </a>, and I'm a{' '}
-        <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
-          software engineer
-        </a>.
-      </div>
-      <div>
-        I{' '}
-        <a target="_blank" href="https://github.com/rozenmd">
-          build things
-        </a>, and occasionally{' '}
-        <a target="_blank" href="https://medium.com/@MxRozen">
-          write.
-        </a>
-      </div>
-      {posts.map(({ node: post }) => {
-        const { frontmatter } = post
-        return (
-          <div key={new Date(frontmatter.date)}>
-            <h1>{frontmatter.date}</h1>
-            <h2 className={'project-title'}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-            </h2>
+    <div className="content">
+      <div className="columns is-mobile">
+        <div className="column">
+          <div>Hey there.</div>
+          <div>
+            I'm{' '}
+            <a target="_blank" href="https://www.twitter.com/mxrozen">
+              Max
+            </a>, and I'm a{' '}
+            <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
+              software engineer
+            </a>.
           </div>
-        )
-      })}
+          <div>
+            I{' '}
+            <a target="_blank" href="https://github.com/rozenmd">
+              build things
+            </a>, and occasionally{' '}
+            <a target="_blank" href="https://medium.com/@MxRozen">
+              write.
+            </a>
+          </div>
+          {posts.map(({ node: post }) => {
+            const { frontmatter } = post
+            return (
+              <div className="column">
+                <div className={'block'} key={new Date(frontmatter.date)}>
+                  <p className={'title is-2'}>{frontmatter.date}</p>
+                  <p className={'subtitle is-4'}>
+                    <Link to={frontmatter.path}>{frontmatter.title}</Link>
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }

@@ -70,6 +70,6 @@ build, and have narrowed it down to the following:
 
   #### AWS AppSync (GraphQL Resolvers) using DynamoDB
 
-  * I've previously blogged about this [here](https://maxrozen.com/2018-01-04-what-is-graphql) and [here](https://maxrozen.com/2018-02-11-setting-up-graphql-backend-resolver/) - but essentially GraphQL resolvers are a sort of middleware layer you drop in front of your data source, and your client can seamlessly request only the fields it requires.
+  * I've previously blogged about this [here](https://maxrozen.com/2018/01/04/what-is-graphql) and [here](https://maxrozen.com/2018/02/11/setting-up-graphql-backend-resolver/) - but essentially GraphQL resolvers are a sort of middleware layer you drop in front of your data source, and your client can seamlessly request only the fields it requires.
 
   - Something new for me - I just wanted to try out AppSync's real-time database. One of the parts of the system I see myself building this weekend is a real-time messaging database, and I will be researching the likes of Discord and Slack to see how they handle messaging.
