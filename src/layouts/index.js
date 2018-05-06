@@ -23,22 +23,22 @@ const Header = () => (
             justifyContent: 'space-around',
           }}
         >
-          <li key={0}>
+          <li key={0} style={{ padding: '7px'}}>
             <Link style={{ fontSize: '1.5em' }} to="/">
               HOME
             </Link>
           </li>
-          <li key={1}>
+          <li key={1} style={{ padding: '7px'}}>
             <a target="_blank" href="https://www.twitter.com/MxRozen">
               <FontAwesomeIcon size={'2x'} icon={faTwitter} />
             </a>
           </li>
-          <li key={2}>
+          <li key={2} style={{ padding: '7px'}}>
             <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
               <FontAwesomeIcon size={'2x'} icon={faLinkedinIn} />
             </a>
           </li>
-          <li key={3}>
+          <li key={3} style={{ padding: '7px'}}>
             <a target="_blank" href="https://github.com/rozenmd">
               <FontAwesomeIcon size={'2x'} icon={faGithub} />
             </a>
