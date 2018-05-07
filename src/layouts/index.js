@@ -13,7 +13,7 @@ import {
 import './all.sass'
 
 const Header = () => (
-  <div className="container" style={{ padding: '15px', color: 'black' }}>
+  <div className="container" style={{ padding: '10px', color: 'black' }}>
     <div className="columns is-mobile">
       <div className="column is-offset-one-quarter is-half">
         <ul
@@ -23,22 +23,22 @@ const Header = () => (
             justifyContent: 'space-around',
           }}
         >
-          <li key={0} style={{ padding: '7px'}}>
+          <li key={0} style={{ padding: '15px' }}>
             <Link style={{ fontSize: '1.5em' }} to="/">
               HOME
             </Link>
           </li>
-          <li key={1} style={{ padding: '7px'}}>
+          <li key={1} style={{ padding: '15px' }}>
             <a target="_blank" href="https://www.twitter.com/MxRozen">
               <FontAwesomeIcon size={'2x'} icon={faTwitter} />
             </a>
           </li>
-          <li key={2} style={{ padding: '7px'}}>
+          <li key={2} style={{ padding: '15px' }}>
             <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
               <FontAwesomeIcon size={'2x'} icon={faLinkedinIn} />
             </a>
           </li>
-          <li key={3} style={{ padding: '7px'}}>
+          <li key={3} style={{ padding: '15px' }}>
             <a target="_blank" href="https://github.com/rozenmd">
               <FontAwesomeIcon size={'2x'} icon={faGithub} />
             </a>
