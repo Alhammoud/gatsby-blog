@@ -64,6 +64,7 @@ const TemplateWrapper = ({ children }) => (
     <Header />
     <div
       style={{
+        width: '100%',
         margin: '0 auto',
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
