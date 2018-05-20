@@ -20,7 +20,7 @@ class Template extends React.Component {
     }
     return (
       <section className="section">
-        <div className="container content">
+        <div className="content">
           <div className="columns">
             <div className="column">
               <Helmet title={`${title} - My Blog`} />
