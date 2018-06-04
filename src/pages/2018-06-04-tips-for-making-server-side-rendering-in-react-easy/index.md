@@ -46,6 +46,28 @@ Usually all you need to do is render some React components, and inject them as S
 
   The trick to making this work in my case was adding `ssrForceFetchDelay: 100` to my Apollo Client (This prevents Apollo from refetching GraphQL queries after the server already fetches them). Follow the tips at Resource [[2]](https://dev-blog.apollodata.com/how-server-side-rendering-works-with-react-apollo-20f31b0c7348) below.
 
+* Step 4: Deploying a bundle without having to copy your `node_modules/` folder into your AWS Lambda function
+
+  This one was huge, and at the time not particularly well documented:
+  Create a `razzle.config.js` file with the following contents:
+
+  ```
+  module.exports = {
+    modify: (config, { target, dev }, webpack) => {
+      // do something to config
+      const appConfig = config // stay immutable here
+
+      if (target === 'node' && !dev) {
+        appConfig.externals = []
+      }
+
+      return appConfig
+    },
+  }
+  ```
+
+  Razzle by default will use nodeExternals to prevent webpack from bundling your node_modules - which you need for AWS Lambda. This fixes that issue.
+
 ## Indispensible resources:
 
 1.  Getting started:
