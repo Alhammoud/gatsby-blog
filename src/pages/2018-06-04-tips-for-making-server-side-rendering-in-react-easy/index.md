@@ -68,7 +68,7 @@ Usually all you need to do is render some React components, and inject them as S
 
   Razzle by default will use nodeExternals to prevent webpack from bundling your node_modules - which you need for AWS Lambda. This fixes that issue.
 
-## Indispensible resources:
+## Indispensable resources:
 
 1.  Getting started:
     https://medium.freecodecamp.org/demystifying-reacts-server-side-render-de335d408fe4
