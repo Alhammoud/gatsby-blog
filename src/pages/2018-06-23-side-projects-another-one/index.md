@@ -7,9 +7,9 @@ excerpt: "Side Projects: Another one"
 ---
 
 So a bit of backstory about me:
-I'm a weight lifter. For the past 8 years, three times a week, I hit the gym and follow a variant of the Greyskull LP lifting program.
+I'm a weight lifter. Three times a week for the past 8 years, I hit the gym and follow a variant of the Greyskull LP lifting program.
 
-I've been a long-time user of a weight tracking app called Libra. Over the years, every time I got a new phone I'd have to go through this awkward dance of exporting the database, uploading to Google Drive, and finally importing the database on the new phone (which wouldn't work consistently)
+I've been a long-time user of a weight tracking app called Libra. Over the years, every time I got a new phone I'd have to go through this awkward dance of exporting the database, uploading to Google Drive, and finally importing the database on the new phone (which wouldn't work consistently).
 
 Long story short, I'm building my own weight tracking software at https://RecordMyWeight.com.
 
