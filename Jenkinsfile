@@ -2,6 +2,9 @@ pipeline {
   agent any
   environment {
     AWS_REGION = "ap-southeast-2"
+    AWS_DEFAULT_REGION="ap-southeast-2"
+    AWS_ACCESS_KEY_ID=credentials('MAXROZEN_AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY=credentials('MAXROZEN_AWS_SECRET_ACCESS_KEY')
   }
   stages {
     stage('setup'){
