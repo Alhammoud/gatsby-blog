@@ -7,7 +7,7 @@ pipeline {
     AWS_SECRET_ACCESS_KEY=credentials('MAXROZEN_AWS_SECRET_ACCESS_KEY')
   }
 
-  tools {nodejs "node"}
+  tools {nodejs "v8.11.3"}
 
   stages {
     stage('setup'){
