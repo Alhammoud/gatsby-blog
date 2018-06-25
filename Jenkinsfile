@@ -29,7 +29,7 @@ pipeline {
         }
       }
       steps {
-        sh "aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
+        sh "/usr/local/bin/aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
       }
     }
   }
