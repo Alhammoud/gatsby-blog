@@ -9,12 +9,16 @@ pipeline {
   stages {
     stage('setup'){
       steps {
-        sh "npm install"
+        node {
+          sh "npm install"
+        }
       }
     }
     stage('build') {
       steps {
-        sh "NODE_ENV=production npm run build"
+        node {
+          sh "NODE_ENV=production npm run build"
+        }
       }
     }
 
