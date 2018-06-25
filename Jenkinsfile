@@ -12,6 +12,7 @@ pipeline {
   stages {
     stage('setup'){
       steps {
+        sh "rm -rf ./node_modules"
         sh "npm install"
       }
     }
