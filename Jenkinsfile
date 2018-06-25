@@ -6,19 +6,18 @@ pipeline {
     AWS_ACCESS_KEY_ID=credentials('MAXROZEN_AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY=credentials('MAXROZEN_AWS_SECRET_ACCESS_KEY')
   }
+
+  tools {nodejs "node"}
+
   stages {
     stage('setup'){
       steps {
-        node {
-          sh "npm install"
-        }
+        sh "npm install"
       }
     }
     stage('build') {
       steps {
-        node {
-          sh "NODE_ENV=production npm run build"
-        }
+        sh "NODE_ENV=production npm run build"
       }
     }
 
