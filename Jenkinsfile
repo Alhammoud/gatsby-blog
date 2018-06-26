@@ -7,8 +7,6 @@ pipeline {
     AWS_SECRET_ACCESS_KEY=credentials('MAXROZEN_AWS_SECRET_ACCESS_KEY')
   }
 
-  tools {nodejs "v9.11.2"}
-
   stages {
     stage('setup'){
       steps {
@@ -30,7 +28,7 @@ pipeline {
         }
       }
       steps {
-        sh "/usr/local/bin/aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
+        sh "aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
       }
     }
   }
