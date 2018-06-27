@@ -10,13 +10,13 @@ pipeline {
   stages {
     stage('setup'){
       steps {
-        //sh "rm -rf ./node_modules"
-        bat "npm install"
+        sh "rm -rf ./node_modules"
+        sh "npm install"
       }
     }
     stage('build') {
       steps {
-        bat "NODE_ENV=production npm run build"
+        sh "NODE_ENV=production npm run build"
       }
     }
 
@@ -28,7 +28,7 @@ pipeline {
         }
       }
       steps {
-        bat "aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
+        sh "aws s3 cp public s3://maxrozen.com/ --recursive --acl public-read --region ${env.AWS_REGION}"
       }
     }
   }
