@@ -56,12 +56,16 @@ const IndexPage = ({ data }) => {
               write.
             </a>
           </div>
+          <div>
+          <hr/>
+          <p className={'title'}>Posts</p>
+          </div>
           {posts.map(({ node: post }) => {
             const { frontmatter } = post
             return (
               <div className="column">
                 <div className={'block'} key={new Date(frontmatter.date)}>
-                  <p className={'title is-2'}>{frontmatter.date}</p>
+                  <p style={{fontSize:'13px',marginBottom:'5px'}}>{frontmatter.date}</p>
                   <p className={'subtitle is-4'}>
                     <Link to={frontmatter.path}>{frontmatter.title}</Link>
                   </p>
@@ -83,7 +87,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "MMM DD")
+            date(formatString: "DD MMM YYYY")
             path
             title
           }
