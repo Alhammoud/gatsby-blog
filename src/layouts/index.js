@@ -56,9 +56,13 @@ const TemplateWrapper = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content: 'Max Rozen - Software Engineer - Blog',
+          content: `Max Rozen's blog on all things Software Engineering, Photography, Travel and more. `,
         },
-        { name: 'keywords', content: 'Max Rozen, Software Engineer, Blog' },
+        {
+          name: 'keywords',
+          content:
+            'Max Rozen, Software Engineer, Blog, JavaScript, TypeScript, Python, Data Engineering, Travel',
+        },
       ]}
     />
     <Header />

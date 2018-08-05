@@ -12,7 +12,7 @@ class Template extends React.Component {
     const { data, location, pathContext } = this.props
     const { markdownRemark: post } = data
     const { frontmatter, html } = post
-    const { title, date } = frontmatter
+    const { title, date, excerpt } = frontmatter
     const { next, prev } = pathContext
     const config = {
       disqusShortname: 'rozenmd',
@@ -23,11 +23,23 @@ class Template extends React.Component {
         <div className="content">
           <div className="columns">
             <div className="column">
-              <Helmet title={`${title} - My Blog`} />
+              <Helmet
+                title={`${title} - Max Rozen's Blog`}
+                meta={[{ name: 'description', content: excerpt }]}
+              />
 
               <div>
-                <h1>{title}</h1>
-                <h3>{date}</h3>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  }}
+                >
+                  <h1>{title}</h1>
+                  <h4>{date}</h4>
+                </div>
                 <div dangerouslySetInnerHTML={{ __html: html }} />
 
                 <Disqus
