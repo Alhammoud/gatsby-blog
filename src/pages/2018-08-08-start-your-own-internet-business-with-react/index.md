@@ -82,3 +82,5 @@ if(process.env.NODE_ENV === 'if (process.env.NODE_ENV === 'production') {
 ```
 
 You'll notice there that we left that last curly bracket un-terminated. Add the `}` on the very last line of the file.
+
+At this point, we can step back, write some terraform scripts to build our infrastructure,
