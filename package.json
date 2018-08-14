@@ -35,7 +35,7 @@
   "scripts": {
     "build": "gatsby build",
     "deploy":
-      "npm run build && s3cmd sync public/* s3://maxrozen.com/ && echo '🚀  Deployed GATSBY!'",
+      "npm run build && aws s3 sync public/ s3://maxrozen.com/ && echo '🚀  Deployed GATSBY!'",
     "develop": "gatsby develop",
     "format":
       "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",

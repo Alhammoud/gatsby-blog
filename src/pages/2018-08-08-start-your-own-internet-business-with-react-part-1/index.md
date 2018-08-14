@@ -1,12 +1,12 @@
 ---
-path: "/2018/08/08/start-your-own-internet-business-with-react"
+path: "/2018/08/08/start-your-own-internet-business-with-react-part-1"
 date: "2018-08-08T05:52:00.000Z"
-title: "Start your own internet business with React, GraphQL and Serverless architecture"
+title: "Start your own internet business with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
 tags: ['graphql','serverless','react']
-excerpt: "Start your own internet business with React, GraphQL and Serverless architecture"
+excerpt: "Start your own internet business with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
 ---
 
-This may seem corny, but in this blog post I'll walk you through what you need to do (tech-wise) to have a React app where your customers can login, pay for things and use your internet business.
+This may seem corny, but in this blog post series I'll walk you through what you need to do (tech-wise) to have a React app where your customers can login, pay for things and use your internet business.
 
 Pre-work - Read:
 
@@ -26,9 +26,9 @@ The architecture consists of four main parts:
 1.  A GraphQL server (An Express server running in AWS Lambda - Node v8 environment)
 1.  A database of some sort (either Key:Value store such as DynamoDB/RethinkDB or traditional, like Postgres)
 1.  A 'Server-side rendering' server (The React app running in AWS Lambda - Node v8 environment)
-1.  The Static resources - sitting in an S3 bucket, send to your users via a CloudFront CDN (which also conveniently provides you with free SSL certificates!)
+1.  The Static resources - sitting in an S3 bucket, sent to your users via a CloudFront CDN (which also conveniently provides you with free SSL certificates!)
 
-On the payment side of things, we'll add a GraphQL resolver that talks to Stripe, but more on that later.
+On the payment side of things, we'll add a GraphQL resolver that talks to Stripe, but that'll be covered in a later blog post.
 
 To begin, we're going to use Razzle. It's like Create-react-app, but for server-side rendering.
 
@@ -114,18 +114,24 @@ if (process.env.NODE_ENV === 'production') {
 
 What we've done here is dynamically import `aws-serverless-express`, as well as the `http` module. This allows us to run the same file for both production, and developing locally.
 
-At this point, we can step back, write some terraform files to build our infrastructure, and bask in the awesomeness that is server-less server-side rendering in React.
+Lastly on the React code side of things, we'll need to edit `src/app.js`, and remove the `exact` keyword from line 9, such that it reads:
+```
+    <Route path="/" component={Home} />
+```
+(this is a requirement to have React function in AWS API Gateway correctly)
+
+At this point, we can step back, write some terraform files to build our infrastructure, and eventually bask in the awesome fact that you've set up server-less server-side rendering in React.
 
 <b>Huge Warning:</b> Learning terraform is *hard*. Almost *none* of this should make sense, (except maybe vars.tf), and that's okay.
 
 1.  Create an infrastructure folder and enter it: `mkdir infrastructure && cd infrastructure`
-1.  Create a `main.tf` file, containing: 
+2.  Create a `main.tf` file, containing: 
     ```
     provider "aws" {
       region = "${var.aws_region}"
     }
     ```
-1. Create a `vars.tf` file, containing:
+3. Create a `vars.tf` file, containing:
     ```
    
     variable "name" { default = "my-app" } #name of your service
@@ -140,7 +146,7 @@ At this point, we can step back, write some terraform files to build our infrast
     }
 
     ```
-1. Create a `lambda.tf` file, containing: 
+4. Create a `lambda.tf` file, containing: 
     ```
     resource "aws_iam_role" "lambda_iam" {
       name = "lambda_iam_${var.name}"
@@ -192,7 +198,7 @@ At this point, we can step back, write some terraform files to build our infrast
 
 
     ```
-1. Create an `api_gateway.tf` file, containing:
+5. Create an `api_gateway.tf` file, containing:
     ```
     resource "aws_api_gateway_rest_api" "ssr" {
       name        = "${var.name}_ssr"
@@ -252,7 +258,7 @@ At this point, we can step back, write some terraform files to build our infrast
     }
 
     ```
-1. Finally, create an `s3.tf` file to store your static content, containing:
+6. Finally, create an `s3.tf` file to store your static content, containing:
     ```
     resource "aws_s3_bucket" "site" {
         bucket = "${var.bucket_site}"
@@ -294,3 +300,34 @@ At this point, we can step back, write some terraform files to build our infrast
     ```
 
 If you've made it this far, I'm genuinely impressed. You now have terraform ready to go and deploy your infrastructure.
+
+We do this by entering the `infrastructure/` directory, and running `terraform apply`. Terraform will then list all of the changes it's about to make, and then at the end, will say:
+```
+Plan: 11 to add, 0 to change, 0 to destroy.
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+```
+Type `yes` <b>if and only if</b> terraform states `0 to destroy`. I will not be liable for the destruction of your production AWS resources.
+
+Terraform will take a couple of minutes to create all the resources we specified, and eventually will output:
+```
+Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+API Gateway URL = https://hfytoyl60m.execute-api.ap-southeast-2.amazonaws.com/prod
+S3_BUCKET = my-app-12345.s3.amazonaws.com
+```
+
+To actually deploy this I manually edited my `package.json` file, and replaced the `"build"` key, with:
+```
+"build":
+      "PUBLIC_PATH=https://my-app-12345.s3-ap-southeast-2.amazonaws.com/public/ razzle build && aws s3 sync \"./build/public/\" s3://my-app-12345/public && aws s3 sync \"./build/static/\" s3://my-app-12345/static && cd ./build && zip -r ./server.zip ./server.*",
+```
+
+This sets the PUBLIC_PATH (the static files like css/js) to point to the S3 bucket we created. Yours will be different. Take particular notice of the `s3-ap-southeast-2` portion of the URL, as I doubt you'll also be setting your region to Sydney, Australia.
+
+This concludes Part 1: Server-side Rendering, Serverlessly. 
+
+Visit https://maxrozen.com for future updates!

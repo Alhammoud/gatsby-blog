@@ -21,8 +21,6 @@ class Template extends React.Component {
     return (
       <section className="section">
         <div className="content">
-          <div className="columns">
-            <div className="column">
               <Helmet
                 title={`${title} - Max Rozen's Blog`}
                 meta={[{ name: 'description', content: excerpt }]}
@@ -66,8 +64,7 @@ class Template extends React.Component {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          
       </section>
     )
   }
