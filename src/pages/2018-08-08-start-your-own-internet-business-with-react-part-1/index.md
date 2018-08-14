@@ -148,24 +148,24 @@ At this point, we can step back, write some terraform files to build our infrast
     ```
 4. Create a `lambda.tf` file, containing: 
     ```
-    resource "aws_iam_role" "lambda_iam" {
-      name = "lambda_iam_${var.name}"
+      resource "aws_iam_role" "lambda_iam" {
+        name = "lambda_iam_${var.name}"
 
-      assume_role_policy = <<EOF
-    {
-      "Version": "2012-10-17",
-      "Statement": [
-        {
-          "Action": "sts:AssumeRole",
-          "Principal": {
-            "Service": "lambda.amazonaws.com"
-          },
-          "Effect": "Allow"
-        }
-      ]
-    }
-    EOF
-    }
+        assume_role_policy = <<EOF
+      {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Action": "sts:AssumeRole",
+            "Principal": {
+              "Service": "lambda.amazonaws.com"
+            },
+            "Effect": "Allow"
+          }
+        ]
+      }
+      EOF
+      }
 
 
     resource "aws_lambda_function" "lambda" {
