@@ -100,7 +100,7 @@ To begin, you'll need to already own a domain in AWS Route 53. Check out https:/
       ```
       resource "aws_cloudfront_distribution" "site" {
         origin {
-          domain_name = "${var.domain_name}.s3-website-${var.aws_region}.amazonaws.com"
+          domain_name = "${var.bucket_site}.s3-website-${var.aws_region}.amazonaws.com"
           origin_id   = "s3"
 
           custom_origin_config {
@@ -156,6 +156,7 @@ To begin, you'll need to already own a domain in AWS Route 53. Check out https:/
           allowed_methods        = ["GET", "HEAD"]
           cached_methods         = ["GET", "HEAD"]
           target_origin_id       = "s3"
+          compress               = true
           default_ttl            = 0
           max_ttl                = 0
           min_ttl                = 0
@@ -200,8 +201,36 @@ To begin, you'll need to already own a domain in AWS Route 53. Check out https:/
       - Sets up two origins (ssr and s3)
       - Creates a default cache (pointing at the ssr origin), and a secondary cache (pointing to the s3)
       - Uses the SSL certificate created earlier to secure the CDN
-  2. Finally, run `terraform apply` again, type `yes` to confirm and wait for terraform to finish building your infrastructure.
-
+  1. Finally, run `terraform apply` again, type `yes` to confirm and wait for terraform to finish building your infrastructure.
+  1. At this point, go into `razzle.config.js` and remove this line:
+      ```      
+      appConfig.output.publicPath = `${process.env.PUBLIC_PATH}`
+      ```
+  1. Also go into `package.json` and remove this part of the `build` script:
+      ```
+      PUBLIC_PATH=https://recordmyweightcom.s3-ap-southeast-2.amazonaws.com/public/
+      ```
+      You also want to change this section:
+      ```
+      aws s3 sync \"./build/public/\" s3://recordmyweightcom/public
+      ```
+      to be:
+      ```
+      aws s3 sync \"./build/public/\" s3://recordmyweightcom
+      ```
+      So in the end it should look like:
+      ```
+      "razzle build && aws s3 sync \"./build/public/\" s3://recordmyweightcom && cd ./build && zip -r ./server.zip ./server.*",
+      ```
+  1. Also, in `infrastructure/s3.tf`, change this line:
+      ```
+      allowed_origins = ["https://${aws_api_gateway_deployment.ssr_deployment.rest_api_id}.execute-api.${var.aws_region}.amazonaws.com"]
+      ```
+      to read:
+      ```
+      allowed_origins = ["https://${var.domain_name}]
+      ```
+  1. Now run `npm run build`, wait for it to complete, then go into `infrastructure/` and run `terraform apply`. This'll redeploy our app using a CDN, rather than your local S3 to serve static resources.
 This concludes Part 2: Let's get this running in production
 
 Check https://maxrozen.com for future updates!
