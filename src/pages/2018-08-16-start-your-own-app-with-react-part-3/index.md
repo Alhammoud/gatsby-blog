@@ -25,7 +25,7 @@ and dev-dependencies:
 yarn add -D webpack babel-core babel-loader babel-plugin-inline-import babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread cross-env
 ```
 
-Time to add add some JavaScript files.
+### Time to add add some JavaScript files
 
 Create a `.babelrc` file in `api/`, containing:
 ```
@@ -230,7 +230,11 @@ export default {
 }
 ```
 
-That's all you should need to get the GraphQL service running locally. We also need to make some changes to our Terraform configuration to:
+That's all you should need to get the GraphQL service running locally. 
+
+### Terraform changes
+
+We also need to make some changes to our Terraform configuration to:
 - Spin up a new Lambda for GraphQL
 - Spin up a new API Gateway for the new Lambda
 - Tell Cloudfront to forward all `/graphql` requests to our API Gateway
@@ -364,4 +368,4 @@ In our existing `cloudfront.tf` file, we'll want to add this immediately after t
   ```
 
 
-  At this point you can run `terraform apply` - You will get an error regarding an API Gateway integration not existing. This is a race condition, and we can get around it just by re-running `terraform apply`.
+  At this point you can run `terraform apply` - You will most likely get an error regarding an API Gateway integration not existing. This is a race condition, and we can get around it just by re-running `terraform apply`.
