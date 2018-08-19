@@ -1,12 +1,12 @@
 ---
-path: "/2018/08/15/start-your-own-internet-business-with-react-part-2"
+path: "/2018/08/15/start-your-own-app-with-react-part-2"
 date: "2018-08-15T05:52:00.000Z"
-title: "Start your own internet business with React, GraphQL and Serverless architecture: Part 2 - Deploying to a real domain name"
+title: "Start your own app with React, GraphQL and Serverless architecture: Part 2 - Deploying to a real domain name"
 tags: ['graphql','serverless','react']
-excerpt: "Start your own internet business with React, GraphQL and Serverless architecture: Part 2 - Let's get this running in production"
+excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 2 - Let's get this running in production"
 ---
 
-Welcome to Part 2 of Starting your own internet business. In Part 1, we got an AWS Lambda function to render React, and in Part 2, we'll be setting that function up to run on our own domain name, with a free SSL certificate!
+Welcome to Part 2 of Starting your own app. In Part 1, we got an AWS Lambda function to render React, and in Part 2, we'll be setting that function up to run on our own domain name, with a free SSL certificate!
 
 To begin, you'll need to already own a domain in AWS Route 53. Check out https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar.html for more details on getting that set up.
 

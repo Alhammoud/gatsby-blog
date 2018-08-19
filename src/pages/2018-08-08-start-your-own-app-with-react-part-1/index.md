@@ -1,12 +1,12 @@
 ---
-path: "/2018/08/08/start-your-own-internet-business-with-react-part-1"
+path: "/2018/08/08/start-your-own-app-with-react-part-1"
 date: "2018-08-08T05:52:00.000Z"
-title: "Start your own internet business with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
+title: "Start your own app with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
 tags: ['graphql','serverless','react']
-excerpt: "Start your own internet business with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
+excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
 ---
 
-This may seem corny, but in this blog post series I'll walk you through what you need to do (tech-wise) to have a React app where your customers can login, pay for things and use your internet business.
+In this blog post series I'll walk you through what you need to do (tech-wise) to have a React app where your customers can login, pay for things and use your internet business.
 
 Pre-work - Read:
 
