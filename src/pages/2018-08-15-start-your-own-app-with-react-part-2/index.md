@@ -228,7 +228,7 @@ To begin, you'll need to already own a domain in AWS Route 53. Check out https:/
       ```
       to read:
       ```
-      allowed_origins = ["https://${var.domain_name}]
+      allowed_origins = ["https://${var.domain_name}"]
       ```
   1. Now run `npm run build`, wait for it to complete, then go into `infrastructure/` and run `terraform apply`. This'll redeploy our app using a CDN, rather than your local S3 to serve static resources.
 This concludes Part 2: Let's get this running in production
