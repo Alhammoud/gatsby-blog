@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
           <div>Hey there.</div>
           <div>
             I'm{' '}
-            <a target="_blank" href="https://www.twitter.com/mxrozen">
+            <a target="_blank" href="https://www.twitter.com/rozenmd">
               Max
             </a>, and I'm a{' '}
             <a target="_blank" href="https://www.linkedin.com/in/rozenmd">

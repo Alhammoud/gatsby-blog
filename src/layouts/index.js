@@ -29,7 +29,7 @@ const Header = () => (
             </Link>
           </li>
           <li key={1} style={{ padding: '15px' }}>
-            <a target="_blank" href="https://www.twitter.com/MxRozen">
+            <a target="_blank" href="https://www.twitter.com/rozenmd">
               <FontAwesomeIcon size={'2x'} icon={faTwitter} />
             </a>
           </li>
