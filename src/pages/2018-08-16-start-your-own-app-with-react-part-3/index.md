@@ -22,7 +22,7 @@ yarn add cors graphql graphql-tag graphql-tools request request-promise-native
 
 and dev-dependencies:
 ```
-yarn add -D webpack babel-core babel-loader babel-plugin-inline-import babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread cross-env
+yarn add -D webpack babel-core babel-loader babel-plugin-inline-import babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread cross-env zip-webpack-plugin webpack-cli
 ```
 
 ### Time to add add some JavaScript files
