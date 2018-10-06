@@ -5,6 +5,7 @@ title: "Thoughts on Measuring Developer Efficiency"
 author: Max Rozen
 tags: ['sre','site reliability engineering']
 excerpt: "Thoughts on Measuring Developer Efficiency"
+canonical: https://onlineornot.com/blog/thoughts-on-measuring-developer-efficiency
 ---
 
 _Originally published at <a href="https://onlineornot.com/blog/thoughts-on-measuring-developer-efficiency">OnlineOrNot</a> on October 6, 2018 by Me (Max Rozen)_

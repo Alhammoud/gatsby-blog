@@ -5,6 +5,7 @@ title: "On server and web app reliability, and the rise of the Site Reliability 
 author: Max Rozen
 tags: ['sre','site reliability engineering']
 excerpt: "On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)"
+canonical: https://onlineornot.com/blog/server-web-app-reliability-rise-of-site-reliability-engineer-sre
 ---
 
 _Originally published at <a href="https://onlineornot.com/blog/server-web-app-reliability-rise-of-site-reliability-engineer-sre">OnlineOrNot</a> on October 3, 2018 by Me (Max Rozen)_
