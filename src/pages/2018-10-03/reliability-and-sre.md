@@ -1,9 +1,9 @@
 ---
 path: "/2018/10/03/server-web-app-reliability-rise-of-site-reliability-engineer-sre"
-date: "2018-10-03"
+date: "2018-10-03T05:52:00.000Z"
 title: "On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)"
 author: Max Rozen
-tags: ['sre','site reliability engineering']
+tags: ['sre','site-reliability-engineering']
 excerpt: "On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)"
 canonical: https://onlineornot.com/blog/server-web-app-reliability-rise-of-site-reliability-engineer-sre
 ---

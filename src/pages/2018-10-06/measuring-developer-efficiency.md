@@ -1,9 +1,9 @@
 ---
 path: "/2018/10/06/thoughts-on-measuring-developer-efficiency"
-date: "2018-10-06"
+date: "2018-10-06T05:52:00.000Z"
 title: "Thoughts on Measuring Developer Efficiency"
 author: Max Rozen
-tags: ['sre','site reliability engineering']
+tags: ['sre','site-reliability-engineering']
 excerpt: "Thoughts on Measuring Developer Efficiency"
 canonical: https://onlineornot.com/blog/thoughts-on-measuring-developer-efficiency
 ---
