@@ -8,6 +8,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://maxrozen.us19.list-manage.com/subscribe/post?u=ed323926c1e0ea00582151d37&amp;id=b5a4559449',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,

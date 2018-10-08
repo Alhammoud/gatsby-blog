@@ -13,6 +13,7 @@
     "gatsby-link": "^1.6.30",
     "gatsby-plugin-feed": "^1.3.22",
     "gatsby-plugin-google-analytics": "^1.0.15",
+    "gatsby-plugin-mailchimp": "^3.3.0",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-sharp": "^1.6.48",
@@ -29,16 +30,16 @@
     "prismjs": "^1.14.0",
     "react-fontawesome": "^1.6.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "deploy":
-      "export AWS_PROFILE=maxrozen.com && npm run build && aws s3 sync public/ s3://maxrozen.com/ && echo '🚀  Deployed GATSBY!'",
+    "deploy": "export AWS_PROFILE=maxrozen.com && npm run build && aws s3 sync public/ s3://maxrozen.com/ && echo '🚀  Deployed GATSBY!'",
     "develop": "gatsby develop",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

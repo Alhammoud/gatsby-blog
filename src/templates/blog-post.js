@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import EmailCaptureForm from '../components/email-capture-form'
 
 class Template extends React.Component {
   constructor(props) {
@@ -40,6 +41,8 @@ class Template extends React.Component {
               <h4>{date}</h4>
             </div>
             <div dangerouslySetInnerHTML={{ __html: html }} />
+            <hr />
+            <EmailCaptureForm />
             <hr />
             <p>
               {prev && (
