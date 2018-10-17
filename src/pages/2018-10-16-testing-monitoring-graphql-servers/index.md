@@ -3,7 +3,7 @@ path: "/2018/10/16/ideas-for-testing-and-monitoring-graphql-servers"
 date: "2018-10-16T05:52:00.000Z"
 title: "Ideas for testing and monitoring GraphQL servers"
 author: Max Rozen
-tags: ['sre','site-reliability-engineering','graphql','graphql-server-monitoring', 'graphql-performance-monitoring']
+tags: ['sre','site-reliability-engineering','graphql','graphql-server-monitoring', 'graphql-performance-monitoring','graphql-monitoring']
 excerpt: "Ideas for testing and monitoring GraphQL servers"
 ---
 
@@ -42,13 +42,13 @@ The biggest win here in my opinion is that an external request to your GraphQL A
 
 ### Logging all requests from the GraphQL server
 
-On the other hand, my initial reaction to logging on the GraphQL server is "eww gross, another snippet of code to include on my server? 🙄".
+On the other hand, there's logging requests from within the GraphQL server itself via a code snippet. My initial reaction to this kind of logging is "Great. Yet another snippet of code to include on my server 🙄".
 
-If my GraphQL server goes down (what i'm trying to detect here), the logger goes down with it, even if I am sending the result to an external service.
+If my GraphQL server goes down (what i'm trying to detect here), the logger goes down with it. There's also the risk of other developers deleting the code snippet unintentionally.
 
 You'd also probably have to manage API keys to send your logs to the external service, and make sure your GraphQL server is able to make outbound trips to the internet (not always guaranteed!)
 
-So let's use external, pre-determined requests!
+So given these downsides, I'm inclined to build <a href="https://onlineornot.com">OnlineOrNot</a> as an external monitoring tool that doesn't require logging all of your requests.
 
 ## Reliability gains
 
