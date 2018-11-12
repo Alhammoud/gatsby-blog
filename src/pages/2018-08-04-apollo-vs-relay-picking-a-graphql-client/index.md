@@ -6,45 +6,47 @@ tags: ['graphql']
 excerpt: "Apollo Vs Relay: Picking a GraphQL Client"
 ---
 
+##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 I'm assuming the reader is familiar with GraphQL, and already has a GraphQL server running. If not, you may wish to review some of my previous posts: [what is graphql?](https://maxrozen.com/2018/01/04/what-is-graphql) and [how to set up your own GraphQL resolvers](https://maxrozen.com/2018/02/11/setting-up-graphql-backend-resolver).
 
 This post discusses the pros and cons of picking a GraphQL client for frontend web development in 2018. The ecosystem can and will change, so do your own research.
 
 ### Arguments for Relay
 
-- It promotes ridiculous efficiency. You pair your fragments with your components, and you only ask for the fields you need.
-- The data structure it requires to work is by default compliant with pagination
-- Due to the pre-generation of GraphQL queries by the relay-compiler, your frontend bundle is smaller. You don't have to bundle the graphql parser with your frontend.
+* It promotes ridiculous efficiency. You pair your fragments with your components, and you only ask for the fields you need.
+* The data structure it requires to work is by default compliant with pagination
+* Due to the pre-generation of GraphQL queries by the relay-compiler, your frontend bundle is smaller. You don't have to bundle the graphql parser with your frontend.
 
 ### Arguments against Relay
 
-- It requires a bit of refactoring to add it to an existing project.
-- IDs need to be unique _ACROSS ALL OF YOUR TYPES_. This means you can't have nice ID values like `1, 2, 3` etc. You have to make them like `typename_1`
-- Actually implementing pagination is quite complex
-- QueryRenderer is quite buggy - it doesn't send errors as errors, and requires that you create an `error` type to be able to render errors on the frontend
-- QueryRenderer is cumbersome/illogical to use if you've ever used Apollo - You don't have to import graphql or even relay to create graphql queries in sub-components, creating a point of confusion for new users (what happens is that Relay walks the DOM down from the QueryRenderer and generates graphql statements for the query fragments you write in the components).
-- You have to run `relay-compiler --src client/src --schema ./schema.graphql` every single time you modify _ANY_ GraphQL query or part of the schema
-- The documentation could be better - lots of confusing parts that aren't explained clearly
+* It requires a bit of refactoring to add it to an existing project.
+* IDs need to be unique _ACROSS ALL OF YOUR TYPES_. This means you can't have nice ID values like `1, 2, 3` etc. You have to make them like `typename_1`
+* Actually implementing pagination is quite complex
+* QueryRenderer is quite buggy - it doesn't send errors as errors, and requires that you create an `error` type to be able to render errors on the frontend
+* QueryRenderer is cumbersome/illogical to use if you've ever used Apollo - You don't have to import graphql or even relay to create graphql queries in sub-components, creating a point of confusion for new users (what happens is that Relay walks the DOM down from the QueryRenderer and generates graphql statements for the query fragments you write in the components).
+* You have to run `relay-compiler --src client/src --schema ./schema.graphql` every single time you modify _ANY_ GraphQL query or part of the schema
+* The documentation could be better - lots of confusing parts that aren't explained clearly
 
 ### Arguments for Apollo
 
-- Setup is easier than Relay
-- Newer versions enable the replacement of Redux, as Apollo Client can be used for State Management
-- Developer experience is wonderful
-- Documentation is impeccable
-- Rapid development of the project itself - Most changes are focused on making adoption easier
+* Setup is easier than Relay
+* Newer versions enable the replacement of Redux, as Apollo Client can be used for State Management
+* Developer experience is wonderful
+* Documentation is impeccable
+* Rapid development of the project itself - Most changes are focused on making adoption easier
 
 ### Arguments against Apollo
 
-- Bundle bloat - The Apollo Client requires a parser to be bundled in with the frontend, increasing the bundle size more than Relay would
-- Adding pagination requires jumping through a few hoops, although still doable
-- Rapid development of the project itself - over the past 6 months the API has wildly changed
-- Some quirks in the Apollo store (where GraphQL query results are cached) do/did exist, querying a type without an `id` can cause strange results (in v1)
+* Bundle bloat - The Apollo Client requires a parser to be bundled in with the frontend, increasing the bundle size more than Relay would
+* Adding pagination requires jumping through a few hoops, although still doable
+* Rapid development of the project itself - over the past 6 months the API has wildly changed
+* Some quirks in the Apollo store (where GraphQL query results are cached) do/did exist, querying a type without an `id` can cause strange results (in v1)
 
 ### Adding Apollo to your project
 
-- You run `npm install apollo-boost react-apollo graphql --save`
-- Create a client in your root component:
+* You run `npm install apollo-boost react-apollo graphql --save`
+* Create a client in your root component:
 
   ```
   import ApolloClient from "apollo-boost";
@@ -53,7 +55,7 @@ This post discusses the pros and cons of picking a GraphQL client for frontend w
   });
   ```
 
-- Wrap your app in an Apollo Provider:
+* Wrap your app in an Apollo Provider:
 
   ```
   import React from "react";
@@ -72,7 +74,7 @@ This post discusses the pros and cons of picking a GraphQL client for frontend w
   render(<App />, document.getElementById("root"));
   ```
 
-- An actual GraphQL wrapped component now looks like this:
+* An actual GraphQL wrapped component now looks like this:
 
   ```
   import gql from "graphql-tag";
@@ -109,9 +111,9 @@ This post discusses the pros and cons of picking a GraphQL client for frontend w
 
 ### Adding Relay to your project
 
-- Run `yarn add react react-dom react-relay`
-- Run `yarn add --dev babel-plugin-relay graphql`
-- Add `relay` to your `.babelrc`:
+* Run `yarn add react react-dom react-relay`
+* Run `yarn add --dev babel-plugin-relay graphql`
+* Add `relay` to your `.babelrc`:
 
   ```
   {
@@ -121,11 +123,11 @@ This post discusses the pros and cons of picking a GraphQL client for frontend w
   }
   ```
 
-- Please note that the "relay" plugin should run before other plugins or presets to ensure the graphql template literals are correctly transformed.
-- Run `yarn add --dev relay-compiler graphql`
-- Add this to your npm scripts: `"relay": "relay-compiler --src ./src --schema ./schema.graphql"`
-- After every edit of graphql files, run this `yarn run relay`
-- Create a "Relay Environment":
+* Please note that the "relay" plugin should run before other plugins or presets to ensure the graphql template literals are correctly transformed.
+* Run `yarn add --dev relay-compiler graphql`
+* Add this to your npm scripts: `"relay": "relay-compiler --src ./src --schema ./schema.graphql"`
+* After every edit of graphql files, run this `yarn run relay`
+* Create a "Relay Environment":
 
   ```
   import {
@@ -161,7 +163,7 @@ This post discusses the pros and cons of picking a GraphQL client for frontend w
   export default environment;
   ```
 
-- Finally, create a QueryRenderer for your app:
+* Finally, create a QueryRenderer for your app:
 
 ```
 // App.js

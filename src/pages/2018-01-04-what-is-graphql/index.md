@@ -6,6 +6,8 @@ tags: ['graphql']
 excerpt: "What exactly *is* GraphQL? Using NodeJS and AWS Lambda to illustrate an example"
 ---
 
+##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 GraphQL is both a client-side query language, and a server-side runtime for
 fetching data from various sources.
 

@@ -5,11 +5,17 @@ title: "Start your own app with React, GraphQL and Serverless architecture: Part
 tags: ['graphql','serverless','react']
 excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 3 - Let's build a GraphQL backend!"
 ---
+
+##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 To start, open up your terminal, navigate to your app, and type:
+
 ```
 mkdir api
 ```
+
 We'll now start a new npm project for our GraphQL server (you could integrate more with the Razzle project, but I'm not entirely sure how).
+
 ```
 npm init -y
 ```
@@ -21,6 +27,7 @@ yarn add cors graphql graphql-tag graphql-tools request request-promise-native
 ```
 
 and dev-dependencies:
+
 ```
 yarn add -D webpack babel-core babel-loader babel-plugin-inline-import babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread cross-env zip-webpack-plugin webpack-cli
 ```
@@ -28,6 +35,7 @@ yarn add -D webpack babel-core babel-loader babel-plugin-inline-import babel-plu
 ### Time to add add some JavaScript files
 
 Create a `.babelrc` file in `api/`, containing:
+
 ```
 {
   "presets": ["env"],
@@ -40,12 +48,14 @@ Create a `.babelrc` file in `api/`, containing:
 ```
 
 In your `package.json` add the following scripts:
+
 ```
 "dev": "cross-env BABEL_DISABLE_CACHE=1 node -r babel-register local.js",
 "build": "cross-env BABEL_DISABLE_CACHE=1 webpack --config=webpack.config.babel.js --env=production"
 ```
 
 Create a `local.js` file in `api/`, containing:
+
 ```
 import cors from 'cors'
 import express from 'express'
@@ -89,10 +99,10 @@ app.listen(PORT, err => {
   }
   console.log(`Listening on http://localhost:${PORT}/`)
 })
-
 ```
 
 Create an `index.js` file in `api/`, containing:
+
 ```
 import { graphql } from 'graphql'
 import schema from './schema'
@@ -147,7 +157,9 @@ export const handler = (event, context, callback) => {
   }
 }
 ```
+
 Create a `resolvers.js` file in `api/`, containing:
+
 ```
 export default {
   Query: {
@@ -160,6 +172,7 @@ export default {
 ```
 
 Create a `schema.graphql` file in `api/`, containing:
+
 ```
 type Query {
   hello: String!
@@ -176,6 +189,7 @@ schema {
 ```
 
 Create a `schema.js` file in `api/`, containing:
+
 ```
 import { makeExecutableSchema } from 'graphql-tools'
 import typeDefs from './schema.graphql'
@@ -188,6 +202,7 @@ export default makeExecutableSchema({
 ```
 
 Finally, create a `webpack.config.babel.js` file in `api/`, containing:
+
 ```
 import path from 'path'
 import webpack from 'webpack'
@@ -230,16 +245,18 @@ export default {
 }
 ```
 
-That's all you should need to get the GraphQL service running locally. 
+That's all you should need to get the GraphQL service running locally.
 
 ### Terraform changes
 
 We also need to make some changes to our Terraform configuration to:
-- Spin up a new Lambda for GraphQL
-- Spin up a new API Gateway for the new Lambda
-- Tell Cloudfront to forward all `/graphql` requests to our API Gateway
+
+* Spin up a new Lambda for GraphQL
+* Spin up a new API Gateway for the new Lambda
+* Tell Cloudfront to forward all `/graphql` requests to our API Gateway
 
 Back in `infrastructure/`, create a `api_gateway_lambda.tf` file containing:
+
 ```
 resource "aws_api_gateway_rest_api" "graphql_api" {
   name        = "${var.name}_api"
@@ -294,6 +311,7 @@ resource "aws_api_gateway_integration" "graphql_integration" {
 ```
 
 In `infrastructure/` create a `lambda_graphql.tf` file containing:
+
 ```
 resource "aws_lambda_function" "graphql" {
   function_name    = "graphql_${var.name}"
@@ -337,35 +355,36 @@ In our existing `cloudfront.tf` file, we'll want to add this immediately after t
 
    origin_path = "/${aws_api_gateway_deployment.graphql_api_deployment.stage_name}"
  }
- ```
- Similarly, still in the `cloudfront.tf` file, add the following immediately after the `ordered_cache_behavior` for `/static/*`:
- ```
-  ordered_cache_behavior {
-    path_pattern           = "graphql"
-    allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
-    cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = "api"
-    default_ttl            = 0
-    max_ttl                = 0
-    min_ttl                = 0
-    viewer_protocol_policy = "https-only"
-    compress               = true
+```
 
-    forwarded_values {
-      query_string = true
+Similarly, still in the `cloudfront.tf` file, add the following immediately after the `ordered_cache_behavior` for `/static/*`:
 
-      cookies {
-        forward = "all"
-      }
+```
+ ordered_cache_behavior {
+   path_pattern           = "graphql"
+   allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+   cached_methods         = ["GET", "HEAD"]
+   target_origin_id       = "api"
+   default_ttl            = 0
+   max_ttl                = 0
+   min_ttl                = 0
+   viewer_protocol_policy = "https-only"
+   compress               = true
 
-      headers = [
-        "Accept",
-        "Authorization",
-        "Origin",
-      ]
-    }
-  }
-  ```
+   forwarded_values {
+     query_string = true
 
+     cookies {
+       forward = "all"
+     }
 
-  At this point you can run `terraform apply` - You will most likely get an error regarding an API Gateway integration not existing. This is a race condition, and we can get around it just by re-running `terraform apply`.
+     headers = [
+       "Accept",
+       "Authorization",
+       "Origin",
+     ]
+   }
+ }
+```
+
+At this point you can run `terraform apply` - You will most likely get an error regarding an API Gateway integration not existing. This is a race condition, and we can get around it just by re-running `terraform apply`.

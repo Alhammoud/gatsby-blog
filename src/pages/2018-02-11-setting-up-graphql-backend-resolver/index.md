@@ -6,10 +6,12 @@ tags: ['serverless','graphql']
 excerpt: "Setting up your own GraphQL backend - step 1 of my Welcome to GraphQL resolvers series"
 ---
 
+##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 If you're anything like me and spent years working with REST Frameworks, you'll
 probably be confused by this crazy GraphQL thing everyone seems to be talking
-about. Why would you even want to work with a graph database? (That was a joke,
-GraphQL is NOT a graph database, for clarity see
+about. Why would you even want to work with a graph database? (Just kidding -
+GraphQL is _not_ a graph database, for clarity see
 [here](https://maxrozen.com/2018/01/04/what-is-graphql))
 
 I'm going to show you how you can use Terraform (see my previous blog to get

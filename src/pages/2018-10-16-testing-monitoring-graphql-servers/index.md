@@ -7,6 +7,8 @@ tags: ['sre','site-reliability-engineering','graphql','graphql-server-monitoring
 excerpt: "Ideas for testing and monitoring GraphQL servers"
 ---
 
+##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 I've been having thoughts on how you would go about testing a GraphQL server for performance and reliability recently, as part of what I'm building for <a href="https://onlineornot.com">OnlineOrNot</a>.
 
 ## Uptime Monitoring
