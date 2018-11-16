@@ -1,5 +1,5 @@
 ---
-path: "/2018/10/16/how-to-fix-pg-promise-cant-resolve-pg-native"
+path: "/2018/11/17/how-to-fix-pg-promise-cant-resolve-pg-native"
 date: "2018-11-17T05:52:00.000Z"
 title: "How to fix: pg-promise can't resolve pg-native"
 author: Max Rozen
