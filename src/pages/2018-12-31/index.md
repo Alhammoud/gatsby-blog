@@ -55,17 +55,15 @@ I wanted to be able to create a public calendar in Google Calendar, while also a
 
 #### Using a template to build side-projects
 
-Half-way through the year, I realised I had been building all of these side projects from scratch each time, and had been pretty burned out by the experience. I basically didn't write any fresh side-project code for two months, though I did try to keep coming up with ideas (I actually bought the domain for two of the ideas, RecordMyWeight.com and IndiePhotogs.com - though I never used them).
+Half-way through the year, I realised I had been building all of these side projects from scratch each time, and had been pretty burned out by the experience. I basically didn't write any fresh side-project code for four months, though I did try to keep coming up with ideas (I actually bought the domain for two of the ideas, RecordMyWeight.com and IndiePhotogs.com - though I never used them).
 
 In August, I collected all of the code I had written all year and built myself a React + GraphQL server template in Terraform that deploys a complete site with HTTPS, CDN caching via CloudFront, GraphQL server & SSR server running in AWS Lambda.
 
 To avoid having to go back and update version numbers in the template, I actually wrote it in the form of a three-part blog:
 
-* [Server-side Rendering, Serverlessly!
-  ](https://maxrozen.com/2018/08/08/start-your-own-app-with-react-part-1/)
-* [Deploying to a real domain name
-  ](https://maxrozen.com/2018/08/15/start-your-own-app-with-react-part-2/)
-* [ Let's build a GraphQL backend!](https://maxrozen.com/2018/08/16/start-your-own-app-with-react-part-3/)
+* [Server-side Rendering, Serverlessly!](https://maxrozen.com/2018/08/08/start-your-own-app-with-react-part-1/)
+* [Deploying to a real domain name](https://maxrozen.com/2018/08/15/start-your-own-app-with-react-part-2/)
+* [Let's build a GraphQL backend!](https://maxrozen.com/2018/08/16/start-your-own-app-with-react-part-3/)
 
 #### OnlineOrNot - finally a problem worth solving
 
@@ -79,7 +77,7 @@ My approach to deciding whether or not to build OnlineOrNot was slightly more ri
 
 So after a month of testing whether people liked the idea, I set off to build [OnlineOrNot](https://onlineornot.com) using my side-project template I had developed back in August. I had quite ambitiously wanted to launch my beta by December 1, however when you're working on a product after work and on weekends, occasionally life gets in the way. I have still not yet officially "launched" the product, I'm still actively recruiting my first ten customers to help beta test the tool.
 
-It being December 31 today, I'd say OnlineOrNot is very close to a public launch - it's embarassingly under-featured, but still executes on its core-value proposition of automating GraphQL testing & uptime monitoring.
+It being December 31 today, I'd say OnlineOrNot is very close to a public launch - it's embarrassingly under-featured, but still executes on its core-value proposition of automating GraphQL testing & uptime monitoring.
 
 Since October 1 the marketing site has received 557 sessions from 491 users (roughly 4x each of my previous side-projects in a comparable period of time).
 
