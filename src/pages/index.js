@@ -52,20 +52,22 @@ const IndexPage = ({ data }) => {
             <a target="_blank" href="https://github.com/rozenmd">
               build things
             </a>, and occasionally{' '}
-            <a target="_blank" href="https://medium.com/@MxRozen">
+            <a target="_blank" href="https://medium.com/@RozenMD">
               write.
             </a>
           </div>
           <div>
-          <hr/>
-          <p className={'title'}>Posts</p>
+            <hr />
+            <p className={'title'}>Posts</p>
           </div>
           {posts.map(({ node: post }) => {
             const { frontmatter } = post
             return (
               <div className="column">
                 <div className={'block'} key={new Date(frontmatter.date)}>
-                  <p style={{fontSize:'13px',marginBottom:'5px'}}>{frontmatter.date}</p>
+                  <p style={{ fontSize: '13px', marginBottom: '5px' }}>
+                    {frontmatter.date}
+                  </p>
                   <p className={'subtitle is-4'}>
                     <Link to={frontmatter.path}>{frontmatter.title}</Link>
                   </p>
