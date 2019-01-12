@@ -21,9 +21,9 @@ class BlogPostTemplate extends React.Component {
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.replace(
       /\//g,
       ''
-    )}.md`
+    )}/index.md`
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://maxrozen.com${slug}`
+      `https://maxrozen.com${post.frontmatter.path}`
     )}`
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -120,6 +120,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
+        path
         date(formatString: "MMMM DD, YYYY")
         excerpt
       }

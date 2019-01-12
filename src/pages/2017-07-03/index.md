@@ -1,9 +1,9 @@
 ---
-path: "/2017/07/02/nghbr"
-date: "2017-07-02T18:52:00.000Z"
-title: "NGHBR"
-tags: ['ngbhr','side-project']
-excerpt: "A hyperlocal social network for the suburbs"
+path: '/2017/07/03/nghbr'
+date: '2017-07-03T18:52:00.000Z'
+title: 'NGHBR'
+tags: ['ngbhr', 'side-project']
+excerpt: 'A hyperlocal social network for the suburbs'
 ---
 
 This app was written as part of a Positive Computing course at the University of
