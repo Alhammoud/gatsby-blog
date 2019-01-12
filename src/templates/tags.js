@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Tags = ({ pathContext }) => {
-  const { posts, tagName } = pathContext
+const Tags = ({ pageContext }) => {
+  const { posts, tagName } = pageContext
   if (posts) {
     return (
       <div>

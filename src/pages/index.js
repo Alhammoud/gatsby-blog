@@ -1,101 +1,78 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
+import get from 'lodash/get'
 
-const sortByDate = (arr, reverse = false, fieldname) => {
-  return arr.sort((a, b) => {
-    if (
-      new Date(a.node.frontmatter[fieldname]) <
-      new Date(b.node.frontmatter[fieldname])
-    ) {
-      return reverse ? 1 : -1
-    }
-    if (
-      new Date(a.node.frontmatter[fieldname]) >
-      new Date(b.node.frontmatter[fieldname])
-    ) {
-      return reverse ? -1 : 1
-    }
-    return 0
-  })
-}
-const sortByField = (arr, reverse = false, fieldname) => {
-  return arr.sort((a, b) => {
-    if (a.node.frontmatter[fieldname] < b.node.frontmatter[fieldname]) {
-      return reverse ? 1 : -1
-    }
-    if (a.node.frontmatter[fieldname] > b.node.frontmatter[fieldname]) {
-      return reverse ? -1 : 1
-    }
-    return 0
-  })
-}
+import Bio from '../components/Bio'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import Footer from '../components/Footer'
+import { formatReadingTime } from '../utils/helpers'
+import { rhythm } from '../utils/typography'
 
-const IndexPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark
-  sortByField(posts, true, 'path')
-  return (
-    <div className="content">
-      <div className="columns is-mobile">
-        <div className="column">
-          <div>Hey there.</div>
-          <div>
-            I'm{' '}
-            <a target="_blank" href="https://www.twitter.com/rozenmd">
-              Max
-            </a>, and I'm a{' '}
-            <a target="_blank" href="https://www.linkedin.com/in/rozenmd">
-              software engineer
-            </a>.
-          </div>
-          <div>
-            I{' '}
-            <a target="_blank" href="https://github.com/rozenmd">
-              build things
-            </a>, and occasionally{' '}
-            <a target="_blank" href="https://medium.com/@RozenMD">
-              write.
-            </a>
-          </div>
-          <div>
-            <hr />
-            <p className={'title'}>Posts</p>
-          </div>
-          {posts.map(({ node: post }) => {
-            const { frontmatter } = post
-            return (
-              <div className="column">
-                <div className={'block'} key={new Date(frontmatter.date)}>
-                  <p style={{ fontSize: '13px', marginBottom: '5px' }}>
-                    {frontmatter.date}
-                  </p>
-                  <p className={'subtitle is-4'}>
-                    <Link to={frontmatter.path}>{frontmatter.title}</Link>
-                  </p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </div>
-  )
+class BlogIndex extends React.Component {
+  render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteDescription = get(
+      this,
+      'props.data.site.siteMetadata.description'
+    )
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = get(node, 'frontmatter.title') || node.frontmatter.path
+          return (
+            <div key={node.frontmatter.path}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: 'none' }} to={node.frontmatter.path}>
+                  {title}
+                </Link>
+              </h3>
+              <small>
+                {node.frontmatter.date}
+                {` • ${formatReadingTime(node.timeToRead)}`}
+              </small>
+              <p
+                dangerouslySetInnerHTML={{ __html: node.frontmatter.excerpt }}
+              />
+            </div>
+          )
+        })}
+        <Footer />
+      </Layout>
+    )
+  }
 }
 
-export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
-      totalCount
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          id
+          timeToRead
           frontmatter {
-            date(formatString: "DD MMM YYYY")
-            path
+            date(formatString: "MMMM DD, YYYY")
             title
+            path
+            excerpt
           }
         }
       }
     }
   }
 `
-export default IndexPage

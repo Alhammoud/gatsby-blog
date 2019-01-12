@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const AllTags = ({ pathContext }) => {
-  const { tags } = pathContext
+const AllTags = ({ pageContext }) => {
+  const { tags } = pageContext
   if (tags) {
     return (
       <div>
@@ -20,4 +20,3 @@ const AllTags = ({ pathContext }) => {
   }
 }
 export default AllTags
-

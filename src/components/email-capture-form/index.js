@@ -73,18 +73,32 @@ class EmailCaptureForm extends React.Component {
             <p style={{ fontWeight: '800' }}>{signupMessage}</p>
             <form id="email-capture" method="post" noValidate>
               <div>
-                <div className="field is-grouped">
+                <div
+                  className="field is-grouped"
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
                   <input
                     type="email"
                     name="email"
                     className="input"
+                    style={{ textAlign: 'center' }}
                     placeholder="you@email.com"
                     onChange={this._handleEmailChange}
                   />
                   <button
-                    className="button is-primary"
+                    className="subscribe-button"
+                    style={{
+                      backgroundColor: '#2962ff',
+                      borderRadius: '24px',
+                      width: '100px',
+                      color: 'white',
+                      fontWeight: 700,
+                    }}
                     type="submit"
-                    style={{ marginLeft: '24px' }}
                     onClick={this._handleFormSubmit}
                   >
                     Subscribe
@@ -99,6 +113,23 @@ class EmailCaptureForm extends React.Component {
                     />
                   </article>
                 )}
+                <div
+                  data-element="guarantee"
+                  className="formkit-guarantee"
+                  style={{
+                    color: 'rgb(77, 77, 77)',
+                    fontSize: '13px',
+                    fontWeight: 400,
+                    fontSize: '13px',
+                    textAlign: 'center',
+                    margin: '0 0 15px 0',
+                  }}
+                >
+                  <p style={{ margin: 0 }}>I won't send you spam.</p>
+                  <p style={{ margin: 0 }}>
+                    Unsubscribe at <em>any</em> time.
+                  </p>
+                </div>
               </div>
             </form>
           </div>
