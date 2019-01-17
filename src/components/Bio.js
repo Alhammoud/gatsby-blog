@@ -30,8 +30,8 @@ class Bio extends React.Component {
         <p style={{ maxWidth: 410 }}>
           Personal blog by <a href="https://twitter.com/RozenMD">Max Rozen</a>.{' '}
           <div>
-            I'm a Software Engineer that runs a GraphQL monitoring service
-            called <a href="https://onlineornot.com">OnlineOrNot</a>.
+            I'm a Software Engineer that runs an automated GraphQL testing
+            service called <a href="https://onlineornot.com">OnlineOrNot</a>.
           </div>
         </p>
       </div>
