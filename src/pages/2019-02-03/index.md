@@ -41,9 +41,9 @@ Essentially, <b>measure everything</b>.
   - <b>Measure it!</b> Time how long it would take you to find that file normally, multiply by how many times per year you perform the task (for added impact, distribute the file to coworkers, and multiply the time saved by the number of people who use your script)
   - Tiny example: `60 seconds * 104 (two times a week for a year) * 5 people = 520 minutes per year`. If those people generate $100/hr for the business usually, you saved the business $866 a year. If you turn that script into a tool that a hundred people in your organisation use, you saved the business \$17666 a year.
 
-- Personal example: As a frontend developer I worked on an iniative to split a frontend codebase's build process away from the backend's codebase. Before the iniative, builds took up to 20 minutes. They now take up to 5 minutes (to deploy the frontend). As a side effect, by running a frontend web server independently from the backend, page loads sped up by 5 seconds.
+- Personal example: As a frontend developer I worked on an initiative to split a frontend codebase's build process away from the backend's codebase. Before the initiative, builds took up to 20 minutes. They now take up to 5 minutes (to deploy the frontend). As a side effect, by running a frontend web server independently from the backend, page loads sped up by 5 seconds.
   - Impact: `5 seconds * 1 million pageviews/mo (hypothetical) = 16666.6 hours per year` + `10 developers * 15 minutes * 261 working days = 677 hours per year`
-  - So on average, the iniative saves humanity 16666.6 hours per year, waiting for the page to load, and saves the engineering team 677 hours waiting for builds to finish.
+  - So on average, the initiative saves humanity 16666.6 hours per year, waiting for the page to load, and saves the engineering team 677 hours waiting for builds to finish.
 
 ### Dealing with other departments
 
