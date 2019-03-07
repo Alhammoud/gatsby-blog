@@ -9,7 +9,7 @@ excerpt: "If you've ever used React & React-Router to implement tabs in navigati
 
 I recently came to the rude realisation that perhaps with the amount of abstraction in the common developer environment, it may be difficult to implement things from scratch, should a popular framework like React fall by the wayside.
 
-So dear reader, here's a simple task we're going to complete. While normally you'd use something like React and React-router to determine which tab should be open, we're going to be using nothing other than pure JavaScript, CSS and HTML.
+So dear reader, here's a simple task we're going to complete. While normally you'd use something like React and React-router to determine which tab should be open, we're going to be using nothing other than pure JavaScript and HTML.
 
 Here's what we need to do:
 
@@ -30,10 +30,6 @@ Be aware that because it's programming, there are _lots_ of different ways to so
     <div id="first-tab">This contains some stuff</div>
     <div id="second-tab">This contains other stuff</div>
     <div id="third-tab">This contains the remainder of our stuff</div>
-
-    <style>
-      /* write anything you want here */
-    </style>
 
     <script>
       /* write anything you want here */
