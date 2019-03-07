@@ -1,10 +1,10 @@
 ---
 path: '/2019/03/07/how-to-implement-tabs-with-vanilla-html-javascript'
 date: '2019-03-07T05:52:00.000Z'
-title: 'How to implement tabs with vanilla HTML and JavaScript'
+title: 'How to implement tab-based navigation with just HTML and JavaScript'
 author: Max Rozen
 tags: ['javascript', 'html']
-excerpt: "If you've ever used React & React-Router to implement tabs in navigation, you might want to know how to do it in pure HTML and JavaScript."
+excerpt: "If you've ever used React & React-Router to implement Tab-based navigation, you might want to know how to do it in pure HTML and JavaScript."
 ---
 
 I recently came to the rude realisation that perhaps with the amount of abstraction in the common developer environment, it may be difficult to implement things from scratch, should a popular framework like React fall by the wayside.
@@ -60,10 +60,6 @@ My gut reaction was to use a `button`, but you might forget that you also need t
     <div id="second-tab">This contains other stuff</div>
     <div id="third-tab">This contains the remainder of our stuff</div>
 
-    <style>
-      /* write anything you want here */
-    </style>
-
     <script>
       /* write anything you want here */
     </script>
@@ -92,17 +88,12 @@ Read over the code in the script tags below, and I'll explain what's happening o
     <a href="#first-tab">Open first tab</a> |
     <a href="#second-tab">Open second tab</a> |
     <a href="#third-tab">Open third tab</a>
-
     <hr />
     <div id="first-tab" style="display:none;">This contains some stuff</div>
     <div id="second-tab" style="display:none;">This contains other stuff</div>
     <div id="third-tab" style="display:none;">
       This contains the remainder of our stuff
     </div>
-
-    <style>
-      /* write anything you want here */
-    </style>
 
     <script>
       const allTabs = ['first-tab', 'second-tab', 'third-tab']

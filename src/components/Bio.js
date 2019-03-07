@@ -23,15 +23,41 @@ class Bio extends React.Component {
             borderRadius: '50%',
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
-            width: rhythm(3),
-            height: rhythm(3),
+            width: rhythm(4),
+            height: rhythm(4),
           }}
         />
-        <p style={{ maxWidth: 410 }}>
-          Personal blog by <a href="https://twitter.com/RozenMD">Max Rozen</a>.{' '}
+        <p style={{ maxWidth: 630 }}>
+          Thoughts by{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/RozenMD"
+          >
+            Max Rozen
+          </a>
+          .
           <div>
-            I'm a Software Engineer that runs an automated GraphQL testing
-            service called <a href="https://onlineornot.com">OnlineOrNot</a>.
+            I specialise in{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/rozenmd/"
+            >
+              GraphQL and Frontend
+            </a>
+            .
+          </div>
+          <div>
+            I also run{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://onlineornot.com"
+            >
+              OnlineOrNot
+            </a>
+            , a GraphQL monitoring service.
           </div>
         </p>
       </div>
