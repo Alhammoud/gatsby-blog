@@ -44,7 +44,7 @@ Be aware that because it's programming, there are _lots_ of different ways to so
 
 ### Step 1 - Determining what's open
 
-We have lots of options here - whether it's using a `button` with an `onclick` handler, or a `div` with an `onclick` handler, use CSS and onhover to only display the div your mouse is currently hovering over the top of, or plain anchor tags, you just need something to know what should be open.
+We have lots of options here - whether it's using a `button` with an `onclick` handler, or a `div` with an `onclick` handler, using CSS and onhover to only display the div your mouse is currently hovering over the top of, or plain anchor tags, you just need something to know what should be open.
 
 My gut reaction was to use a `button`, but you might forget that you also need to set `type="button"` to override the default of `type="submit"`
 
