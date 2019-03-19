@@ -38,7 +38,7 @@ class Bio extends React.Component {
           </a>
           .
           <div>
-            I specialise in{' '}
+            Passionate about{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -57,7 +57,7 @@ class Bio extends React.Component {
             >
               OnlineOrNot
             </a>
-            , a GraphQL monitoring service.
+            , a GraphQL testing service.
           </div>
         </p>
       </div>
