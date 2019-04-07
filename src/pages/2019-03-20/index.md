@@ -19,7 +19,7 @@ I always considered myself a "keen learner" and a "fast learner", but I really d
 
 > "Do you know what it's doing under the hood?" He'd respond.
 
-> "Nope."
+> "Nope." 
 
 Now my manager at the time wouldn't block my pull requests, or anything like that. He'd just give me plenty of time to do things the right way (i.e. learning exactly what resources to spin up, and how many to spin up, and how to describe that in terraform). Hell, he'd even encourage me to merge my pull request that used Zappa for configuring our serverless python functions, and that sort of passive aggression was exactly what I needed to motivate me to learn.
 
