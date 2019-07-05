@@ -3,7 +3,7 @@ module.exports = {
     title: 'Max Rozen',
     author: 'Max Rozen',
     description:
-      "Personal blog by Max Rozen. I'm a Software Engineer that runs a GraphQL monitoring service called OnlineOrNot.",
+      "I'm a web-focused Software Engineer that builds side-projects and runs them as businesses.",
     siteUrl: 'https://maxrozen.com',
     social: {
       twitter: '@RozenMD',
