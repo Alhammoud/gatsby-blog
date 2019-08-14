@@ -1,5 +1,5 @@
 ---
-path: '/2019/08/15/how-to-write-semantic-html'
+path: '/2019/08/15/why-webpack-not-importing-all-css'
 date: '2019-08-15T05:52:00.000Z'
 title: 'Why is webpack not importing all of my CSS? (mini-css-extract-plugin)'
 author: Max Rozen
