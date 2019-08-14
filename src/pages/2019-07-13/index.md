@@ -52,7 +52,7 @@ Bad:
 
 **Why is this bad?**
 
-Divs are not focusable by keyboards. We could make them focussable by adding `tabindex="0"`, but this can still be hacky in the case of inputs.
+Divs are not focusable by keyboards. We could make them focusable by adding `tabindex="0"`, but this can still be hacky in the case of inputs.
 
 ### Inputs
 
@@ -70,4 +70,4 @@ Bad:
 
 **Why is this bad?**
 
-As mentioned before, divs are not focussable by default. Adding `tabindex="0"` here will make your div focussable, but then you would also need to write additional JavaScript to submit the value of your "checkbox" when the rest of the form submits.
+As mentioned before, divs are not focusable by default. Adding `tabindex="0"` here will make your div focusable, but then you would also need to write additional JavaScript to submit the value of your "checkbox" when the rest of the form submits.
