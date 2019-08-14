@@ -1,10 +1,10 @@
 ---
-path: "/2019/01/02/books-i-read-in-2018"
-date: "2019-01-02T05:52:00.000Z"
-title: "The books I read in 2018"
+path: '/2019/01/02/books-i-read-in-2018'
+date: '2019-01-02T05:52:00.000Z'
+title: 'The books I read in 2018'
 author: Max Rozen
-tags: ['startups','business']
-excerpt: "A list of books I read in 2018"
+tags: ['startups', 'business']
+excerpt: 'A list of books I read in 2018'
 ---
 
 ### How I read:
@@ -19,19 +19,19 @@ A few books I bought either didn't resonate with me, or the narration was atroci
 
 ### The list
 
-* Why We Sleep - Matthew Walker
-* Bullshit Jobs - David Graeber
-* It Doesn't Have To Be Crazy at Work - DHH, Jason Fried
-* Rework - Jason Fried, DHH
-* Angel - Jason Calacanis
-* Blitzscaling - Reid Hoffman, Chris Yeh
-* Debt - David Graeber (half-finished)
-* Hooked: How to Build Habit-Forming Products - Nir Eyal
-* Thinking in Bets - Annie Duke
-* High Growth Handbook - Elad Gil (half-finished)
-* The Upstarts - Brad Stone
-* The Everything Store - Brad Stone
-* All Marketers Are Liars - Seth Godin
-* Creativity Inc - Ed Catmull
-* The Icarus Deception - Seth Godin
-* Purple Cow - Seth Godin
+- Why We Sleep - Matthew Walker
+- Bullshit Jobs - David Graeber
+- It Doesn't Have To Be Crazy at Work - DHH, Jason Fried
+- Rework - Jason Fried, DHH
+- Angel - Jason Calacanis
+- Blitzscaling - Reid Hoffman, Chris Yeh
+- Debt - David Graeber (half-finished)
+- Hooked: How to Build Habit-Forming Products - Nir Eyal
+- Thinking in Bets - Annie Duke
+- High Growth Handbook - Elad Gil (half-finished)
+- The Upstarts - Brad Stone
+- The Everything Store - Brad Stone
+- All Marketers Are Liars - Seth Godin
+- Creativity Inc - Ed Catmull
+- The Icarus Deception - Seth Godin
+- Purple Cow - Seth Godin
