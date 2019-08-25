@@ -47,6 +47,10 @@ class Footer extends React.Component {
         >
           stack overflow
         </a>
+        <br />
+        <div style={{ textAlign: 'center' }}>
+          © Max Rozen 2015 - {new Date().getFullYear()}.
+        </div>
       </footer>
     )
   }

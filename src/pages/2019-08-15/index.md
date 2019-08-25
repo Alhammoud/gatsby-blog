@@ -32,7 +32,11 @@ Our library had `sideEffects: false` in its package.json.
 
 This flags all modules as side effect free. However, this is incorrect as css files do have a side effect (adding styles to the DOM). As you are not using any export of the imported css, webpack decides the css file is unneeded and doesn't include it in the output css bundle.
 
-Instead the library's package.json should have `sideEffects: [ "*.css" ]`.
+Instead the library's package.json should have
+
+```js
+sideEffects: ['*.css']
+```
 
 If this happens in a library you do not have publish rights to, you can add the following to your webpack configuration:
 

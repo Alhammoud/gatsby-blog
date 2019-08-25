@@ -1,11 +1,7 @@
 import React from 'react'
-
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
 import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
+import { Link } from 'gatsby'
 
 class Bio extends React.Component {
   render() {
@@ -13,52 +9,30 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
-          marginBottom: rhythm(2.5),
+          marginBottom: rhythm(2),
         }}
       >
         <img
           src={profilePic}
           alt={`Max Rozen`}
           style={{
-            borderRadius: '50%',
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
-            width: rhythm(4),
-            height: rhythm(4),
+            width: rhythm(2),
+            height: rhythm(2),
+            borderRadius: '50%',
           }}
         />
-        <p style={{ maxWidth: 630 }}>
-          Thoughts by{' '}
+        <p style={{ maxWidth: 310 }}>
+          Thoughts on business, software, and marketing by{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://twitter.com/RozenMD"
           >
             Max Rozen
-          </a>
-          .
-          <div>
-            Passionate about{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/rozenmd/"
-            >
-              GraphQL and Frontend
-            </a>
-            .
-          </div>
-          <div>
-            I also run{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://onlineornot.com"
-            >
-              OnlineOrNot
-            </a>
-            , a GraphQL testing service.
-          </div>
+          </a>{' '}
+          [<Link to="/about">About</Link>]
         </p>
       </div>
     )
