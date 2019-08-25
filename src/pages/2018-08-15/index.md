@@ -1,8 +1,8 @@
 ---
-path: "/2018/08/15/start-your-own-app-with-react-part-2"
-date: "2018-08-15T05:52:00.000Z"
-title: "Start your own app with React, GraphQL and Serverless architecture: Part 2 - Deploying to a real domain name"
-tags: ['graphql','serverless','react']
+path: '/2018/08/15/start-your-own-app-with-react-part-2'
+date: '2018-08-15T05:52:00.000Z'
+title: 'Start your own app with React, GraphQL and Serverless architecture: Part 2 - Deploying to a real domain name'
+tags: ['graphql', 'serverless', 'react']
 excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 2 - Let's get this running in production"
 ---
 
@@ -211,9 +211,9 @@ To begin, you'll need to already own a domain in AWS Route 53. Check out https:/
 
     This one might seem quite complicated initially - but it only does a few things:
 
-    * Sets up two origins (ssr and s3)
-    * Creates a default cache (pointing at the ssr origin), and a secondary cache (pointing to the s3)
-    * Uses the SSL certificate created earlier to secure the CDN
+    - Sets up two origins (ssr and s3)
+    - Creates a default cache (pointing at the ssr origin), and a secondary cache (pointing to the s3)
+    - Uses the SSL certificate created earlier to secure the CDN
 
 1.  Finally, run `terraform apply` again, type `yes` to confirm and wait for terraform to finish building your infrastructure.
 1.  At this point, go into `razzle.config.js` and remove this line:
