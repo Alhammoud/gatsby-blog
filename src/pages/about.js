@@ -25,11 +25,15 @@ class About extends React.Component {
             Software Engineering and Commerce.
           </p>
           <p>
-            I began my career thinking I would start a career in Investment
-            Banking, only to find jobs hard to come by in a post credit crisis
-            world. I ended up building data pipelines for hedge funds and family
-            offices, before learning web development as a means to display
-            financial data in interesting ways.
+            I began my career thinking I would work in Investment Banking, only
+            to find jobs hard to come by in a post credit crisis world. I ended
+            up building data pipelines for hedge funds and family offices,
+            before learning web development as a means to display financial data
+            in interesting ways.
+          </p>
+          <p>
+            More recently, I became interested in building online businesses,
+            having built and launched 3 so far.
           </p>
 
           <h2>Some things I have done</h2>
