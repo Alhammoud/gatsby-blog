@@ -6,7 +6,7 @@ tags: ['graphql','mailchimp']
 excerpt: "How to add MailChimp to your GraphQL resolver backend - surprisingly easy to do!"
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 This tutorial will walk through adding emails through the MailChimp REST API v3,
 using GraphQL resolvers.

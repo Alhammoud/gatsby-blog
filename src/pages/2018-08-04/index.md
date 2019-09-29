@@ -6,7 +6,7 @@ tags: ['graphql']
 excerpt: 'Apollo Vs Relay: Picking a GraphQL Client'
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 I'm assuming the reader is familiar with GraphQL, and already has a GraphQL server running. If not, you may wish to review some of my previous posts: [what is graphql?](https://maxrozen.com/2018/01/04/what-is-graphql) and [how to set up your own GraphQL resolvers](https://maxrozen.com/2018/02/11/setting-up-graphql-backend-resolver).
 

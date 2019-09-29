@@ -1,14 +1,11 @@
 ---
-path: "/2018/10/03/server-web-app-reliability-rise-of-site-reliability-engineer-sre"
-date: "2018-10-03T05:52:00.000Z"
-title: "On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)"
+path: '/2018/10/03/server-web-app-reliability-rise-of-site-reliability-engineer-sre'
+date: '2018-10-03T05:52:00.000Z'
+title: 'On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)'
 author: Max Rozen
-tags: ['sre','site-reliability-engineering']
-excerpt: "On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)"
-canonical: https://onlineornot.com/blog/server-web-app-reliability-rise-of-site-reliability-engineer-sre
+tags: ['sre', 'site-reliability-engineering']
+excerpt: 'On server and web app reliability, and the rise of the Site Reliability Engineer (SRE)'
 ---
-
-_Originally published at <a href="https://onlineornot.com/blog/server-web-app-reliability-rise-of-site-reliability-engineer-sre">OnlineOrNot</a> on October 3, 2018 by Me (Max Rozen)_
 
 If you've ever heard a new term, and then suddenly saw it everywhere, you know how I felt in 2015, finishing off my Honours thesis on Web Application Performance Testing and seeing Site Reliability Engineering (SRE) suddenly becoming a thing (Google seems to have come up with the position way back in 2003, funnily enough).
 

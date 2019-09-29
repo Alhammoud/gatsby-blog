@@ -6,7 +6,7 @@ tags: ['graphql','serverless','react']
 excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 3 - Let's build a GraphQL backend!"
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 To start, open up your terminal, navigate to your app, and type:
 

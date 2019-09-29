@@ -6,7 +6,7 @@ tags: ['serverless','graphql']
 excerpt: "Setting up your own GraphQL backend - step 1 of my Welcome to GraphQL resolvers series"
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 If you're anything like me and spent years working with REST Frameworks, you'll
 probably be confused by this crazy GraphQL thing everyone seems to be talking

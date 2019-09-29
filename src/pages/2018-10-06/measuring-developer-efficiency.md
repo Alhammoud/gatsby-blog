@@ -1,14 +1,11 @@
 ---
-path: "/2018/10/06/thoughts-on-measuring-developer-efficiency"
-date: "2018-10-06T05:52:00.000Z"
-title: "Thoughts on Measuring Developer Efficiency"
+path: '/2018/10/06/thoughts-on-measuring-developer-efficiency'
+date: '2018-10-06T05:52:00.000Z'
+title: 'Thoughts on Measuring Developer Efficiency'
 author: Max Rozen
-tags: ['sre','site-reliability-engineering']
-excerpt: "Thoughts on Measuring Developer Efficiency"
-canonical: https://onlineornot.com/blog/thoughts-on-measuring-developer-efficiency
+tags: ['sre', 'site-reliability-engineering']
+excerpt: 'Thoughts on Measuring Developer Efficiency'
 ---
-
-_Originally published at <a href="https://onlineornot.com/blog/thoughts-on-measuring-developer-efficiency">OnlineOrNot</a> on October 6, 2018 by Me (Max Rozen)_
 
 ### How _do_ you measure developer efficiency?
 

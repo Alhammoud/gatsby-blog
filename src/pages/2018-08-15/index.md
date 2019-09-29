@@ -6,7 +6,7 @@ tags: ['graphql', 'serverless', 'react']
 excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 2 - Let's get this running in production"
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 Welcome to Part 2 of Starting your own app. In Part 1, we got an AWS Lambda function to render React, and in Part 2, we'll be setting that function up to run on our own domain name, with a free SSL certificate!
 

@@ -6,7 +6,7 @@ tags: ['graphql','serverless','react']
 excerpt: "Start your own app with React, GraphQL and Serverless architecture: Part 1 - Server-side Rendering, Serverlessly!"
 ---
 
-##### If you're interested in GraphQL testing, you may want to check out my side project, [OnlineOrNot](https://OnlineOrNot.com).
+
 
 In this blog post series I'll walk you through what you need to do (tech-wise) to have a React app where your customers can login, pay for things and use your internet business.
 
