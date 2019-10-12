@@ -39,9 +39,16 @@ class About extends React.Component {
           <h2>Some things I have done</h2>
           <ul>
             <li>
-              <a href="https://onlineornot.com">OnlineOrNot</a> is a paid
-              GraphQL testing and uptime monitoring service that tests GraphQL
-              queries for correctness and performance.
+              <p>
+                OnlineOrNot was a paid GraphQL testing and uptime monitoring
+                service from 2018-10-01 to 2019-10-01 that tested GraphQL
+                queries for correctness and performance.
+              </p>
+              <p>
+                As of 2019-10-01 OnlineOrNot became an{' '}
+                <a href="https://onlineornot.com">Uptime Monitoring Service</a>{' '}
+                for websites.
+              </p>
             </li>
             <li>
               <strong>Consulting</strong> - I help businesses with advice on
