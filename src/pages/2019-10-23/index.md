@@ -17,6 +17,8 @@ We can measure the impact of deferring the loading of these scripts using a metr
 
 # The fix
 
+Add the following code to wherever you load your marketing scripts. Then move your marketing scripts where it says `//insert marketing snippets here`.
+
 ```js
 window.addEventListener(
   'scroll',
