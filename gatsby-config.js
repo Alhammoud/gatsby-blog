@@ -3,7 +3,7 @@ module.exports = {
     title: 'Max Rozen',
     author: 'Max Rozen',
     description:
-      "I'm a web-focused Software Engineer that builds side-projects and runs them as businesses.",
+      "I'm a Software Engineer with a passion for building web applications to run as businesses.",
     siteUrl: 'https://maxrozen.com',
     social: {
       twitter: '@RozenMD',
@@ -81,19 +81,19 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl
+                const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at maxrozen.com. You can read it online by <a href="${siteUrl +
                   edge.node.frontmatter.path}">clicking here</a>.)</div>
-              `
+              `;
 
-                let html = edge.node.html
+                let html = edge.node.html;
                 // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
                   .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.excerpt,
@@ -101,8 +101,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   custom_elements: [{ 'content:encoded': html + postText }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -134,17 +134,17 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `MaxRozen.com`,
-        short_name: `MaxRozen`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#2962ff`,
-        display: `minimal-ui`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `MaxRozen.com`,
+    //     short_name: `MaxRozen`,
+    //     start_url: `/`,
+    //     background_color: `#ffffff`,
+    //     theme_color: `#2962ff`,
+    //     display: `minimal-ui`,
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-typography',
@@ -153,4 +153,4 @@ module.exports = {
       },
     },
   ],
-}
+};
