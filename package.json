@@ -53,7 +53,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
-    "deploy": "export AWS_PROFILE=maxrozen.com && npm run build && aws s3 sync public/ s3://maxrozen.com/ && echo '🚀  Deployed GATSBY!'",
+    "deploy": "export AWS_PROFILE=maxrozen.com && npm run build && aws s3 sync public/ s3://maxrozen.com/ --delete && echo '🚀  Deployed GATSBY!'",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
