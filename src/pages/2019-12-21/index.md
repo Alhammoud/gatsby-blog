@@ -11,11 +11,10 @@ So, at the end of 2018 I wrote this article: [2018: Reflections on trying to sta
 
 - Launch OnlineOrNot, the GraphQL monitoring solution
 - Go camping more
-- Sell some camera gear
 
 How did I do? Well:
 
-### Real-life
+## Real-life
 
 We travelled and camped quite a bit!
 
@@ -27,7 +26,7 @@ Later in the year we camped in the Myall Lakes National Park, south of Forster. 
 
 ![Camping in Myall Lakes](myall_lakes.jpg)
 
-### Work
+## Work
 
 I worked at Expert360 as a full-time employee, working on the React frontend. After speeding up their frontend's performance (Time to Document Complete) by 75% and scrapping the microfrontend architecture in favour of a monolithic React app to save 4 seconds on each page load, I decided to go off in search of bigger and better challenges. In doing so, I also noticed I really enjoyed the challenges of tracking down performance issues on the web.
 
@@ -35,9 +34,9 @@ I ended up working for a large Australian marketing/advertising business, and ye
 
 So I became a contractor! I'm currently building [SiteHive's](http://sitehive.co/) entire frontend, data pipelines, and GraphQL backend, while also building the foundation for a design system in the future.
 
-### After Work
+## After Work
 
-#### OnlineOrNot
+### OnlineOrNot
 
 OnlineOrNot was a GraphQL monitoring service that took snapshots of your queries, and checked them at intervals to ensure your resolvers would return what you expected them to.
 
@@ -63,23 +62,44 @@ In September I started rewriting OnlineOrNot to be a simple uptime monitoring so
 
 I have no plans on a public launch, and I'm happy with just using it while contracting as a web developer.
 
-#### Using a template: revisited
+### Using a template: revisited
 
 Though that's not the end of my indie-hacker story. Last year I [built a template to make launching SaaS ideas faster](https://maxrozen.com/2018/12/31/2018-review-starting-an-internet-business#using-a-template-to-build-side-projects). This year I spent some time developing the overall "framework" a SaaS idea needs, adding:
 
 - Auth0 integration
 - More robust authentication code (seriously, check this out)
   ![React Authentication](auth_code.jpeg)
+- Rewrote most of the frontend to use React Hooks (for readability, mostly)
 - Stripe integration
 - Mailchimp integration
 - Subscription handling (particularly feature availability in trials, but also pricing/subscription pages within the apps)
 
 While building these features I noticed the AWS Lambda architecture I used in OnlineOrNot made swapping out the "core" of the business extremely simple, and launching another business in parallel wouldn't take much effort.
 
-#### Introducing PerfBeacon
+### Introducing PerfBeacon
 
 At Expert360, I found the manual work involved in optimising a web application's performance frustrating, and went searching for better tooling. [PerfBeacon](https://perfbeacon.com) was started out of a desire to help improve performance across the web, and the realisation that one cannot improve without first measuring.
 
+PerfBeacon is a synthetic frontend performance monitor, similar to how OnlineOrNot worked when it tested GraphQL queries. It runs Google Lighthouse from anywhere in the world you'd like (assuming there's an AWS datacentre there...) against a webpage, extracts key metrics you'd like to visualise, and graphs them for you.
+
+The coolest thing I've found about it so far is that it lets you find where in the world your CDN isn't performing as well as it could be:
+
+![PerfBeacon Performance Monitor](perfbeacon.png)
+
 In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 276 visitors on the website, resulting in 17 subscriptions to the mailing list.
 
-So I'm thinking this idea might have legs after all.
+While this is roughly half the attention OnlineOrNot received, I'm actually having real conversations with people about monitoring their frontend performance this time, and I'm thinking this idea might have legs after all. If not, I'll be able to use it as a secret weapon as a frontend contractor, so not all will be lost.
+
+## 2020 Plans
+
+### Finish up PerfBeacon, and launch!
+
+By finish up of course I mean finish the features people absolutely need to monitor performance. So I'll be finishing up a feature to test pages that require authentication, and adding team support (inviting team mates, etc) and looking to launch early next year.
+
+This time around I won't be relying on content marketing or posting to HackerNews/Product Hunt for my sales pipeline, I'll be showing people the product in real life.
+
+### Screencasts
+
+Around October this year I bought a microphone with the intention of making screencasts explaining things in JavaScript and React that took me ages to understand. I didn't get around to actually doing it in between hunting for jobs and building PerfBeacon and OnlineOrNot, so hoping to get some out there next year. I intend to follow these [awesome guides](https://howtoegghead.com/instructor/screencasting/) Egghead.io has.
+
+Anyway, here’s me signing off for 2019, Happy New Year folks!
