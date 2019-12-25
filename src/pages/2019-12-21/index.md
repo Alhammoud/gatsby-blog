@@ -26,13 +26,17 @@ Later in the year we camped in the Myall Lakes National Park, south of Forster. 
 
 ![Camping in Myall Lakes](myall_lakes.jpg)
 
+Over Christmas, we hiked Mount Kosciuszko (highest mountain in Australia) - a 13 kilometer walk from the Thredbo chairlift. It was a really nice break from sitting in front of a laptop all day long.
+
+![Hiking Mount Kosciuszko](mount-kosciuszko.jpg)
+
 ## Work
 
 I worked at Expert360 as a full-time employee, working on the React frontend. After speeding up their frontend's performance (Time to Document Complete) by 75% and scrapping the microfrontend architecture in favour of a monolithic React app to save 4 seconds on each page load, I decided to go off in search of bigger and better challenges. In doing so, I also noticed I really enjoyed the challenges of tracking down performance issues on the web.
 
-I ended up working for a large Australian marketing/advertising business, and yet again found myself working at a company that advertised a job description that didn't meet the reality of what the business needed. I lasted about two months before realising they wouldn't be needing my skills for months, and I didn't want to sit around building features for WordPress.
+I ended up working for a large Australian marketing/advertising business, and yet again found myself working at a company that advertised a job description that didn't meet the reality of what the business needed. I lasted about two months before realising they wouldn't be needing my skills for months, and I didn't want to sit around building features for their WordPress site.
 
-So I became a contractor! I'm currently building [SiteHive's](http://sitehive.co/) entire frontend, data pipelines, and GraphQL backend, while also building the foundation for a design system in the future.
+So I became a contractor! I'm currently building [SiteHive's](http://sitehive.co/) entire React frontend, data pipelines, and Node/GraphQL backend, while also building the foundation for a design system in the future.
 
 ## After Work
 
@@ -88,15 +92,17 @@ The coolest thing I've found about it so far is that it lets you find where in t
 
 In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 276 visitors on the website, resulting in 17 subscriptions to the mailing list.
 
-While this is roughly half the attention OnlineOrNot received, I'm actually having real conversations with people about monitoring their frontend performance this time, and I'm thinking this idea might have legs after all. If not, I'll be able to use it as a secret weapon as a frontend contractor, so not all will be lost.
+While this is roughly half the attention OnlineOrNot received, I'm actually having real conversations with people about monitoring their frontend performance this time, and I'm thinking this idea might have legs after all. If not, I'll still use it daily to monitor frontend performance every time I deploy, so not all will be lost.
 
 ## 2020 Plans
 
 ### Finish up PerfBeacon, and launch!
 
-By finish up of course I mean finish the features people absolutely need to monitor performance. So I'll be finishing up a feature to test pages that require authentication, and adding team support (inviting team mates, etc) and looking to launch early next year.
+By finish up of course I mean finish the features people absolutely need to monitor performance. So I'll be finishing up a feature to test pages that require authentication, making it possible to test on-demand (like during a CI process) and looking to launch early next year.
 
-This time around I won't be relying on content marketing or posting to HackerNews/Product Hunt for my sales pipeline, I'll be showing people the product in real life.
+Writing this section feels like déjà vu - I essentially had an identical goal for OnlineOrNot at the end of 2018.
+
+This time it'll be different though. I won't be relying on/praying for content marketing to do the job for me, and instead will be reaching out to companies in real life to discuss how they track their web performance.
 
 ### Screencasts
 
