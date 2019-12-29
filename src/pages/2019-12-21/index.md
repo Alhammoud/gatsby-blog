@@ -7,7 +7,11 @@ tags: ['blog', 'career', 'software']
 excerpt: 'A review of what I said I would do in 2019, and what I actually did.'
 ---
 
-So, at the end of 2018 I wrote this article: [2018: Reflections on trying to start an internet business](https://maxrozen.com/2018/12/31/2018-review-starting-an-internet-business), at the end of which I promised I would:
+Hey there! I've been working on building a sustainable internet business for just over two years now, and I figured I should share some lessons I've learned along the way.
+
+In summary, over the years I've built: a job board, an appointment scheduler, a room booking tool based on the appointment scheduler, a GraphQL monitoring service, an uptime monitoring service, and I'm currently building a web performance monitoring service.
+
+So, at the end of 2018 I wrote this article: [2018: Reflections on trying to start an internet business](https://maxrozen.com/2018/12/31/2018-review-starting-an-internet-business), in which I promised I would:
 
 - Launch OnlineOrNot, the GraphQL monitoring solution
 - Go camping more
@@ -34,7 +38,7 @@ Over Christmas, we hiked Mount Kosciuszko (highest mountain in Australia) - a 13
 
 I worked at Expert360 as a full-time employee, working on the React frontend. After speeding up their frontend's performance (Time to Document Complete) by 75% and scrapping the microfrontend architecture in favour of a monolithic React app to save 4 seconds on each page load, I decided to go off in search of bigger and better challenges. In doing so, I also noticed I really enjoyed the challenges of tracking down performance issues on the web.
 
-I ended up working for a large Australian marketing/advertising business, and yet again found myself working at a company that advertised a job description that didn't meet the reality of what the business needed. I lasted about two months before realising they wouldn't be needing my skills for months, and I didn't want to sit around building features for their WordPress site.
+I ended up working for a large Australian marketing/advertising business, and yet again found myself working at a company that advertised a job description that didn't meet the reality of what the business needed. I lasted about two months before realising they wouldn't be needing my skills for months (if not years), and I didn't want to sit around building features for their WordPress site.
 
 So I became a contractor! I'm currently building [SiteHive's](http://sitehive.co/) entire React frontend, data pipelines, and Node/GraphQL backend, while also building the foundation for a design system in the future.
 
@@ -54,7 +58,9 @@ My main means of acquiring users was content marketing, targeting two main keywo
 
 So if directly targeting keywords didn't work, what did?
 
-Complaining! I wrote an article [comparing two GraphQL clients: Apollo and Relay](https://medium.com/@RozenMD/apollo-vs-relay-modern-an-unbiased-look-at-which-graphql-client-to-use-b0143663e0ec), in which I mainly complained about their shortcomings, and in total received 20.2k impressions, and 2.28k clicks for "Relay", and 21.1k impressions, 2.41k clicks for "Apollo".
+Complaining!
+
+I wrote an article [comparing two GraphQL clients: Apollo and Relay](https://medium.com/@RozenMD/apollo-vs-relay-modern-an-unbiased-look-at-which-graphql-client-to-use-b0143663e0ec), in which I mainly complained about their shortcomings, and in total received 20.2k impressions, and 2.28k clicks for "Relay", and 21.1k impressions, 2.41k clicks for "Apollo".
 
 In the past 12 months OnlineOrNot received 65k total impressions, leading to 4.82k clicks, leading to 54 real signups, which lead to 1 paid user (who I sold to personally, rather than relying on content marketing).
 
@@ -92,7 +98,7 @@ The coolest thing I've found about it so far is that it lets you find where in t
 
 ![PerfBeacon Performance Monitor](perfbeacon.png)
 
-In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 307 visitors on the website, resulting in 19 subscriptions to the mailing list (I still have no idea what I'm doing with mailing lists, I'll probably send a "We've launched!" email, and that's about it).
+In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 307 visitors on the website, resulting in 19 subscriptions to the mailing list (I still have no idea what I'm doing with mailing lists, I plan on sending a "We've launched!" email, and that's about it).
 
 While this is roughly half the attention OnlineOrNot received, people are actually signing up to the mailing list, and I'm thinking this idea might have legs after all. If not, I'll still use it daily to monitor frontend performance every time I deploy, so not all will be lost.
 
@@ -102,7 +108,7 @@ While this is roughly half the attention OnlineOrNot received, people are actual
 
 This year I read [The Mom Test](http://momtestbook.com/), and [Your first ten customers](https://stripe.com/atlas/guides/starting-sales), and I think I finally _get_ the whole customer acquisition/sales thing.
 
-Getting your first 10 customers from content marketing alone is:
+In my experience, getting your first 10 customers from content marketing alone is:
 
 1. Extremely difficult to get right
 1. Kind of a waste of time (unless you've got thousands of people in your mailing list)
@@ -111,7 +117,7 @@ Talking to customers is the fastest way to figure out if the problem you're solv
 
 ### Your MVP can really be extremely minimal
 
-As part of our accelerator program, SiteHive had to demonstrate its solution to potential investors and customers by a certain date. I shipped a demo with barely functioning login (hardcoded values in the backend), no database, and just a bunch of charts stuck together in React.
+As part of the accelerator program, SiteHive had to demonstrate its solution to potential investors and customers by a certain date. I shipped a demo with barely functioning login (hardcoded values in the backend), no database, and just a bunch of charts stuck together in React.
 
 While the solution was quite sparse, it was already solving the problem at this point.
 
