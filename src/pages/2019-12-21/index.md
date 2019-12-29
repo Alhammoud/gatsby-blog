@@ -1,6 +1,6 @@
 ---
-path: '/2019/12/21/2019-further-reflections-trying-to-start-an-internet-business'
-date: '2019-12-21T05:52:00.000Z'
+path: '/2019/12/29/2019-further-reflections-trying-to-start-an-internet-business'
+date: '2019-12-29T05:52:00.000Z'
 title: '2019: Further reflections on trying to start an internet business'
 author: Max Rozen
 tags: ['blog', 'career', 'software']
@@ -37,6 +37,8 @@ I worked at Expert360 as a full-time employee, working on the React frontend. Af
 I ended up working for a large Australian marketing/advertising business, and yet again found myself working at a company that advertised a job description that didn't meet the reality of what the business needed. I lasted about two months before realising they wouldn't be needing my skills for months, and I didn't want to sit around building features for their WordPress site.
 
 So I became a contractor! I'm currently building [SiteHive's](http://sitehive.co/) entire React frontend, data pipelines, and Node/GraphQL backend, while also building the foundation for a design system in the future.
+
+SiteHive is an extremely early stage startup, having just made it out of an accelerator program. It's been incredibly eye-opening to witness first-hand how to find customers (mainly through personal networks), and how we use customer conversations to feed the product roadmap.
 
 ## After Work
 
@@ -90,15 +92,48 @@ The coolest thing I've found about it so far is that it lets you find where in t
 
 ![PerfBeacon Performance Monitor](perfbeacon.png)
 
-In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 276 visitors on the website, resulting in 17 subscriptions to the mailing list.
+In terms of idea validation, I mainly just put up a landing page, and started a [Twitter account](https://twitter.com/PerfBeacon) to follow interesting people in web performance. Since starting in mid October, I've had 307 visitors on the website, resulting in 19 subscriptions to the mailing list (I still have no idea what I'm doing with mailing lists, I'll probably send a "We've launched!" email, and that's about it).
 
-While this is roughly half the attention OnlineOrNot received, I'm actually having real conversations with people about monitoring their frontend performance this time, and I'm thinking this idea might have legs after all. If not, I'll still use it daily to monitor frontend performance every time I deploy, so not all will be lost.
+While this is roughly half the attention OnlineOrNot received, people are actually signing up to the mailing list, and I'm thinking this idea might have legs after all. If not, I'll still use it daily to monitor frontend performance every time I deploy, so not all will be lost.
+
+## Main things I learned this year
+
+### Recruit your first customers
+
+This year I read [The Mom Test](http://momtestbook.com/), and [Your first ten customers](https://stripe.com/atlas/guides/starting-sales), and I think I finally _get_ the whole customer acquisition/sales thing.
+
+Getting your first 10 customers from content marketing alone is:
+
+1. Extremely difficult to get right
+1. Kind of a waste of time (unless you've got thousands of people in your mailing list)
+
+Talking to customers is the fastest way to figure out if the problem you're solving is even a problem at all.
+
+### Your MVP can really be extremely minimal
+
+As part of our accelerator program, SiteHive had to demonstrate its solution to potential investors and customers by a certain date. I shipped a demo with barely functioning login (hardcoded values in the backend), no database, and just a bunch of charts stuck together in React.
+
+While the solution was quite sparse, it was already solving the problem at this point.
+
+We were able to have highly valuable conversations with potential customers and investors with only the core features they cared about (the data visualisation). It made me realise that I really over-engineer my side-projects, thinking that everything had to be _done_ to be able to launch.
+
+### Your tech stack does not matter
+
+This year I worked for a company that pulls in millions in revenue per month from an insanely beefy WordPress installation. The engineering team's velocity of being able to ship features was probably the lowest I've ever seen, and yet the business was still making bank.
+
+The takeaway here is to just use whatever technology you're comfortable with.
+
+There is no shame in using Ruby on Rails, Django, or even a code-free solution like Airtable/Zapier in 2020.
+
+Shipping something that people find useful/valuable beats using Svelte/Vue/Angular/React or whatever people are arguing about in JavaScript frameworks.
 
 ## 2020 Plans
 
 ### Finish up PerfBeacon, and launch!
 
-By finish up of course I mean finish the features people absolutely need to monitor performance. So I'll be finishing up a feature to test pages that require authentication, making it possible to test on-demand (like during a CI process) and looking to launch early next year.
+I originally was going to wait until PerfBeacon was "feature-complete" before launching, but after working for SiteHive for a few months, I've realised getting _anything_ to market, and being able to talk to people about it is much more valuable.
+
+After launching, I'll be making it possible to test on-demand (like during a CI process), and also show screenshots of different points in the tested page's load process.
 
 Writing this section feels like déjà vu - I essentially had an identical goal for OnlineOrNot at the end of 2018.
 
@@ -106,6 +141,8 @@ This time it'll be different though. I won't be relying on/praying for content m
 
 ### Screencasts
 
-Around October this year I bought a microphone with the intention of making screencasts explaining things in JavaScript and React that took me ages to understand. I didn't get around to actually doing it in between hunting for jobs and building PerfBeacon and OnlineOrNot, so hoping to get some out there next year. I intend to follow these [awesome guides](https://howtoegghead.com/instructor/screencasting/) Egghead.io has.
+Around October this year I bought a microphone with the intention of making screencasts explaining things in JavaScript and React that took me ages to understand. I didn't get around to actually doing it in between hunting for jobs and building PerfBeacon and OnlineOrNot, so hoping to get some out there next year. I intend to follow these [awesome guides](https://howtoegghead.com/instructor/screencasting/) from egghead.io.
+
+## Ciao!
 
 Anyway, here’s me signing off for 2019, Happy New Year folks!
